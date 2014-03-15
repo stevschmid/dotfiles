@@ -1,0 +1,25 @@
+#!/bin/sh
+
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  echo "  Installing oh-my-zsh for you."
+  git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+  # Set as default shell
+  chsh -s /bin/zsh
+fi
+
+ZSH_CUSTOM_PATH="$HOME/.oh-my-zsh/custom"
+
+ZSH_HL_PATH="$ZSH_CUSTOM_PATH/plugins/zsh-syntax-highlighting"
+if [ ! -d $ZSH_HL_PATH ]; then
+  echo "  Installing ZSH Syntax Highlighting."
+  mkdir -p $ZSH_HL_PATH
+  cd $ZSH_HL_PATH
+  git clone git://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_HL_PATH
+fi
+
+ZSH_THEMES_PATH="$ZSH_CUSTOM_PATH/themes"
+if [ ! -d $ZSH_THEMES_PATH ]; then
+  echo "  Linking ZSH Custom Themes."
+  ln -s $HOME/.dotfiles/zsh/themes $ZSH_THEMES_PATH
+fi
+

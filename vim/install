@@ -1,0 +1,11 @@
+#!/bin/sh
+if [ ! -d "$HOME/.vim/bundle/vundle" ]; then
+  echo "  Installing vundle for you."
+  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+  vim +BundleInstall +qall
+fi
+
+if [ ! -d "$HOME/.vim/undo" ]; then
+  mkdir -p $HOME/.vim/undo
+fi
+
