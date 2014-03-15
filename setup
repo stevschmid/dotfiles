@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+
+require 'pathname'
+require 'yaml'
+
+DOTFILES = File.join(File.dirname(Pathname.new(__FILE__).realpath))
+HOME = ENV['HOME']
+
+Dir.chdir(DOTFILES)
+
+config = YAML.load_file('config.yml')
+
+def status(s)
+  puts [s ? "\e[92m" : "\e[31", s, "\e[0m"].join
+end
+
+print "Setup OSX settings: "
+status system("osx/setup")
+
+# Symlink *.symlink files
+Dir.glob('**/*.symlink').each do |src|
+  filename = ".#{Pathname.new(src).basename('.*')}"
+  dst = File.join(HOME, filename)
+  puts "Symlink #{dst}"
+end
+
+# Install global apps (e.g. Brew)
+Dir.glob('**/install').each do |f|
+  app = Pathname.new(f).dirname
+  path = File.join(DOTFILES, f)
+  print "Executing #{path}: "
+  status system("#{path} > /tmp/#{app}_install.log 2>&1")
+end
+
+# Exec brew
+brew_path = File.join(DOTFILES, 'brew')
+Dir.chdir(brew_path) do
+  print "Update and install homebrew recipes: "
+  status system("brew update > /tmp/brew.log && brew bundle >> /tmp/brew.log 2>&1")
+end
+
+# Set global ruby version
+Dir.chdir(HOME) do
+  current_version = `rbenv version`.split(' ').first
+  version = config['ruby_version']
+  if current_version != version
+    print "Install ruby version #{version}: "
+    status system("rbenv install -f #{version} > /tmp/rubyversion.log 2>&1")
+
+    print "Set as global version: "
+    status system("rbenv global #{version} >> /tmp/rubyversion.log 2>&1")
+  end
+end
+
+# Gems gems
+config['global_gems'].each do |gem|
+  print "Install global gem #{gem}: "
+  status system("RBENV_GEMSETS=\"global\" gem install #{gem} 2>&1 > /tmp/#{gem}.log")
+end
+print "Rehash gems: "
+status system("rbenv rehash")
