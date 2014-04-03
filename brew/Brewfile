@@ -12,6 +12,7 @@ install ag
 install rbenv
 install ruby-build
 install rbenv-gemset --HEAD
+install rbenv-gem-rehash
 
 # pow
 # install pow (uncomment if new version comes out, currently 0.4.1 which has issues with rbenv)
