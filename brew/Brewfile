@@ -28,6 +28,7 @@ cask install virtualbox
 cask install vagrant
 cask install slate
 cask install sourcetree
+cask install iterm2
 
 # Finally link the apps
 linkapps
