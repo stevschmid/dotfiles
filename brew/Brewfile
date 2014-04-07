@@ -27,6 +27,7 @@ cask install alfred
 cask install virtualbox
 cask install vagrant
 cask install slate
+cask install sourcetree
 
 # Finally link the apps
 linkapps
