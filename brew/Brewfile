@@ -23,6 +23,7 @@ install tmux
 install reattach-to-user-namespace
 
 # cask
+cask install alfred
 cask install virtualbox
 cask install vagrant
 cask install slate
