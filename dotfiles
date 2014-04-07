@@ -4,7 +4,7 @@ require 'pathname'
 require 'yaml'
 require 'fileutils'
 
-ACTIONS = %w[setup gems brew]
+ACTIONS = %w[setup brew ruby]
 
 DOTFILES = File.join(File.dirname(Pathname.new(__FILE__).realpath))
 HOME = ENV['HOME']
@@ -40,19 +40,6 @@ if action == 'setup'
     print "Executing #{path}: "
     status system("#{path}")
   end
-
-  # Set global ruby version
-  Dir.chdir(HOME) do
-    current_version = `rbenv version`.split(' ').first
-    version = config['ruby_version']
-    if current_version != version
-      print "Install ruby version #{version}: "
-      status system("rbenv install -f #{version}")
-
-      print "Set as global version: "
-      status system("rbenv global #{version}")
-    end
-  end
 end
 
 if action == 'brew'
@@ -66,7 +53,19 @@ if action == 'brew'
   end
 end
 
-if action == 'gems'
+if action == 'ruby'
+  # Set global ruby version
+  Dir.chdir(HOME) do
+    current_version = `rbenv version`.split(' ').first
+    version = config['ruby_version']
+    if current_version != version
+      print "Install ruby version #{version}: "
+      status system("rbenv install -f #{version}")
+
+      print "Set as global version: "
+      status system("rbenv global #{version}")
+    end
+  end
   # Gems gems
   config['global_gems'].each do |gem|
     print "Install global gem #{gem}: "
