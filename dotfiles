@@ -4,7 +4,7 @@ require 'pathname'
 require 'yaml'
 require 'fileutils'
 
-ACTIONS = %w[setup brew ruby]
+ACTIONS = %w[setup brew ruby gems]
 
 DOTFILES = File.join(File.dirname(Pathname.new(__FILE__).realpath))
 HOME = ENV['HOME']
@@ -66,6 +66,9 @@ if action == 'ruby'
       status system("rbenv global #{version}")
     end
   end
+end
+
+if action == 'gems'
   # Gems gems
   config['global_gems'].each do |gem|
     print "Install global gem #{gem}: "
