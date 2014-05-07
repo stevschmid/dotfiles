@@ -274,3 +274,5 @@ inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 " http://superuser.com/questions/195022/vim-how-to-synchronize-nerdtree-with-current-opened-tab-file-path
 map <leader>r :NERDTreeFind<cr>
+
+set arabic
