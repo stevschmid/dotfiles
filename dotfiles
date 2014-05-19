@@ -70,9 +70,13 @@ end
 
 if action == 'gems'
   # Gems gems
-  config['global_gems'].each do |gem|
-    print "Install global gem #{gem}: "
-    status system("RBENV_GEMSETS=\"global\" gem install #{gem}")
+  # Need path to gem bin due to https://github.com/sstephenson/rbenv/issues/121
+  gem_path = `rbenv shims`.match(/^.+\/gem$/)[0]
+  `rbenv versions`.scan(/([0-9\.\-p]+)/).flatten.each do |ruby_version|
+    config['global_gems'].each do |gem|
+      print "Install global gem #{gem} for Ruby #{ruby_version}: "
+      status system("RBENV_VERSION=\"#{ruby_version}\" RBENV_GEMSETS=\"global\" #{gem_path} install #{gem}")
+    end
   end
   print "Rehash gems: "
   status system("rbenv rehash")
