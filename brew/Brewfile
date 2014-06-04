@@ -1,6 +1,7 @@
 # general
 install cmake
 install git
+install ctags
 
 # editor
 install macvim --override-system=vim
