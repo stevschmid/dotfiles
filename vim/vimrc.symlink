@@ -55,7 +55,7 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " original repos on github
-" Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Bundle 'tpope/vim-rails.git'
@@ -278,3 +278,8 @@ inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 " http://superuser.com/questions/195022/vim-how-to-synchronize-nerdtree-with-current-opened-tab-file-path
 map <leader>r :NERDTreeFind<cr>
+
+" Disable whatever hightling
+" http://vimrc-dissection.blogspot.ch/2006/09/vim-7-re-turn-off-parenparenthesiswhat.html
+" Made ERB editing really slow...
+let loaded_matchparen = 1

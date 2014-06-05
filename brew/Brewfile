@@ -11,7 +11,7 @@ install ag
 
 # ruby
 install rbenv
-install ruby-build
+install ruby-build --HEAD
 install rbenv-gemset --HEAD
 install rbenv-gem-rehash
 
