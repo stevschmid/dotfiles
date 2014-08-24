@@ -29,3 +29,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # https://github.com/dotphiles/dotzsh#mac-os-x
 sudo chmod ugo-x /usr/libexec/path_helper
+
+# http://superuser.com/questions/457253/more-crisp-font-for-iterm-on-osx
+defaults write -g AppleFontSmoothing -int 1
+sudo defaults write -g AppleFontSmoothing -int 1
