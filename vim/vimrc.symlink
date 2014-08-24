@@ -249,6 +249,11 @@ iab FIXES <C-R>=GitBranchIssue('true')<CR>
 nnoremap ,f :CtrlP<CR>
 nnoremap ,b :CtrlPBuffer<CR>
 
+" make n stuff
+nnoremap ,m :make!<CR>
+nnoremap ,a :cp<CR>
+nnoremap ,s :cn<CR>
+
 " make it snappier
 set timeoutlen=1000 ttimeoutlen=0
 
