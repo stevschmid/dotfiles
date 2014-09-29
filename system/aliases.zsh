@@ -13,6 +13,7 @@ alias b='bundle'
 alias r='rspec'
 alias gg='git up'
 alias ql='powder link'
+alias vim='mvim -v --servername VIM'
 
 # vim
 alias vim='mvim -v'

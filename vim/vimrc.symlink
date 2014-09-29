@@ -98,6 +98,7 @@ Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-repeat'
 Bundle 'moll/vim-bbye'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'jcfaria/Vim-R-plugin'
 
 filetype plugin indent on     " required!
 "
@@ -288,3 +289,5 @@ map <leader>r :NERDTreeFind<cr>
 " http://vimrc-dissection.blogspot.ch/2006/09/vim-7-re-turn-off-parenparenthesiswhat.html
 " Made ERB editing really slow...
 let loaded_matchparen = 1
+
+let vimrplugin_vsplit=1
