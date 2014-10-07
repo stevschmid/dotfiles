@@ -99,6 +99,9 @@ Bundle 'tpope/vim-repeat'
 Bundle 'moll/vim-bbye'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'jcfaria/Vim-R-plugin'
+" Bundle 'vim-pandoc/vim-pandoc'
+" Bundle 'vim-pandoc/vim-pandoc-syntax' 
+" Bundle 'vim-pandoc/vim-rmarkdown'
 
 filetype plugin indent on     " required!
 "

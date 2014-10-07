@@ -16,4 +16,4 @@ alias ql='powder link'
 alias vim='mvim -v --servername VIM'
 
 # vim
-alias vim='mvim -v'
+alias vim='mvim -v --servername VIM'
