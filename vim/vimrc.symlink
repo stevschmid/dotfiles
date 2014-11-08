@@ -77,8 +77,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-dispatch'
-"Bundle 'Valloric/YouCompleteMe' Lags a tad bit too much. Maybe we have to
-"copy the mvim vim as the doc suggests
 Bundle 'netdata/vim-puppet'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-endwise'
@@ -99,9 +97,17 @@ Bundle 'tpope/vim-repeat'
 Bundle 'moll/vim-bbye'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'jcfaria/Vim-R-plugin'
-" Bundle 'vim-pandoc/vim-pandoc'
-" Bundle 'vim-pandoc/vim-pandoc-syntax' 
-" Bundle 'vim-pandoc/vim-rmarkdown'
+Bundle 'vim-pandoc/vim-pandoc'
+Bundle 'vim-pandoc/vim-pandoc-syntax' 
+Bundle 'vim-pandoc/vim-rmarkdown'
+Bundle 'lervag/vim-latex'
+Bundle 'tikhomirov/vim-glsl'
+
+Bundle 'msanders/cocoa.vim'
+Bundle 'nacitar/a.vim'
+
+" Lags a tad bit too much. Maybe we have to copy the mvim vim as the doc suggests
+" Bundle 'Valloric/YouCompleteMe' 
 
 filetype plugin indent on     " required!
 "
@@ -291,6 +297,8 @@ map <leader>r :NERDTreeFind<cr>
 " Disable whatever hightling
 " http://vimrc-dissection.blogspot.ch/2006/09/vim-7-re-turn-off-parenparenthesiswhat.html
 " Made ERB editing really slow...
-let loaded_matchparen = 1
+" let loaded_matchparen = 1
 
 let vimrplugin_vsplit=1
+let g:latex_fold_enabled = 0
+
