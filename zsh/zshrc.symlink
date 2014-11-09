@@ -57,3 +57,5 @@ source $ZSH/oh-my-zsh.sh
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
 
+# B O X E N B O Y S
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
