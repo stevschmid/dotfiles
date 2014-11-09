@@ -1,7 +1,0 @@
-#!/bin/sh
-
-if test ! $(which brew)
-then
-  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-  (brew tap phinze/cask && brew install brew-cask) > /tmp/homebrew-cask-install.log
-fi

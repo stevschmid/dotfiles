@@ -1,4 +1,4 @@
-set guifont=Sauce\ Code\ Powerline\ Light:h14 
+set guifont=Sauce\ Code\ Powerline\ Regular:h14 
 set antialias                     " MacVim: smooth fonts.
 
 set guioptions-=T                 " Hide toolbar.

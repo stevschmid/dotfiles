@@ -1,6 +1,0 @@
----
-ruby_version: '2.1.2'
-global_gems:
-  - bundler
-  - powder
-  - git-up

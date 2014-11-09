@@ -106,9 +106,6 @@ Bundle 'tikhomirov/vim-glsl'
 Bundle 'msanders/cocoa.vim'
 Bundle 'nacitar/a.vim'
 
-" Lags a tad bit too much. Maybe we have to copy the mvim vim as the doc suggests
-" Bundle 'Valloric/YouCompleteMe' 
-
 filetype plugin indent on     " required!
 "
 " Brief help
