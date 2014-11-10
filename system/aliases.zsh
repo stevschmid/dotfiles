@@ -8,4 +8,6 @@ alias fh='history | grep'
 alias rc='rails console'
 alias qq='touch tmp/restart.txt'
 alias b='bundle'
+
 alias vim='mvim -v --servername VIM'
+alias vimed='vim ~/.vimrc ~/.*.vim'
