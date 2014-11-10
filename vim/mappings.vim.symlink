@@ -1,0 +1,33 @@
+" Get off my lawn
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
+" gundo.vim
+nnoremap <F6> :GundoToggle<CR>
+
+" NERDtree
+map <C-n> :NERDTreeToggle<CR>
+
+" nice and sexy profiling hotkeys
+nnoremap <silent> <leader>DD :exe ":profile start profile.log"<cr>:exe ":profile func *"<cr>:exe ":profile file *"<cr>
+nnoremap <silent> <leader>DQ :exe ":profile pause"<cr>:noautocmd qall!<cr>
+
+" bind K to search for word under cursor
+nnoremap K :Ag! "\b<C-R><C-W>\b"<CR>
+
+" ctrlP mappings
+nnoremap ,f :CtrlP<CR>
+nnoremap ,b :CtrlPBuffer<CR>
+
+" make n stuff
+nnoremap ,m :make!<CR>
+nnoremap ,a :cp<CR>
+nnoremap ,s :cn<CR>
+
+" http://superuser.com/questions/195022/vim-how-to-synchronize-nerdtree-with-current-opened-tab-file-path
+map <leader>r :NERDTreeFind<cr>
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
