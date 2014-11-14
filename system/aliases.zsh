@@ -10,4 +10,4 @@ alias qq='touch tmp/restart.txt'
 alias b='bundle'
 
 alias vim='mvim -v --servername VIM'
-alias vimed='vim ~/.vimrc ~/.*.vim'
+alias vimed='cd ~/.dotfiles; vim ~/.vimrc ~/.*.vim'
