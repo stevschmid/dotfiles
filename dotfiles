@@ -13,13 +13,20 @@ def status(s)
 end
 
 # Symlink *.symlink files
-Dir.glob('**/*.symlink').each do |f|
-  _, base = Pathname.new(f).split
-  filename = ".#{base.basename('.*')}"
-  # rel_dir = dir.each_filename.to_a[1..-1]
+Dir.glob(['**/*.symlink', '**/*.dsymlink']).each do |f|
+  dir, base = Pathname.new(f).split
+  name_without_symlink = base.basename('.*')
+  if base.extname == '.dsymlink'
+    # symlink in hidden directory
+    fulldir = File.join(HOME, ".#{dir}")
+    FileUtils.mkdir_p fulldir
+    dst = File.join(fulldir, name_without_symlink)
+  else
+    # symlink for hidden file
+    dst = File.join(HOME, ".#{name_without_symlink}")
+  end
 
   src = File.join(DOTFILES, f)
-  dst = File.join(HOME, filename)
   puts "Symlink #{dst}"
   FileUtils.ln_sf(src, dst)
 end
