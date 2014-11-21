@@ -45,6 +45,9 @@ Plugin 'kchmck/vim-coffee-script' " Gimme dat coffeescript support plox
 Plugin 'tikhomirov/vim-glsl' " GLSL Support
 Plugin 'octol/vim-cpp-enhanced-highlight' " Enhanced C++ support
 
+" SCIENCE
+Plugin 'jcfaria/Vim-R-plugin'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
