@@ -47,6 +47,9 @@ Plugin 'octol/vim-cpp-enhanced-highlight' " Enhanced C++ support
 
 " SCIENCE
 Plugin 'jcfaria/Vim-R-plugin'
+let vimrplugin_vsplit = 1 " vertical split
+Plugin 'ervandew/screen' " needed for VimLab
+Plugin 'dajero/VimLab'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
