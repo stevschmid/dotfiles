@@ -21,6 +21,8 @@ Plugin 'tpope/vim-commentary' " Comment dat baby out
 Plugin 'sjl/gundo.vim' " I don't use it much, but Nilsi swears on it!
 Plugin 'rking/ag.vim' " RIP grep
 Plugin 'ervandew/supertab' " Autocompletion tab
+Plugin 'ryanss/vim-hackernews' " Hackernews in VIM? Sign me up!
+Plugin 'rizzatti/dash.vim' " DashMe
 Plugin 'majutsushi/tagbar' " Tabgar for swaggy overview
 
 " NAVIGATION
