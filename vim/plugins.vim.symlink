@@ -50,6 +50,7 @@ Plugin 'octol/vim-cpp-enhanced-highlight' " Enhanced C++ support
 " SCIENCE
 Plugin 'jcfaria/Vim-R-plugin'
 let vimrplugin_vsplit = 1 " vertical split
+let vimrplugin_assign = 2 " turn double _ into <-
 Plugin 'ervandew/screen' " needed for VimLab
 Plugin 'dajero/VimLab'
 
