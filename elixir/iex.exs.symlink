@@ -1,0 +1,8 @@
+defmodule IExHelpers do
+  def r do
+    Mix.Task.reenable "compile.elixir"
+    Mix.Task.run "compile.elixir"
+  end
+end
+
+iex = IExHelpers

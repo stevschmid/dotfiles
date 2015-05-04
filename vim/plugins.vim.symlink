@@ -46,6 +46,7 @@ Plugin 'netdata/vim-puppet' " Automatic poeppet alignment, count me in!
 Plugin 'kchmck/vim-coffee-script' " Gimme dat coffeescript support plox
 Plugin 'tikhomirov/vim-glsl' " GLSL Support
 Plugin 'octol/vim-cpp-enhanced-highlight' " Enhanced C++ support
+Plugin 'elixir-lang/vim-elixir'
 
 " SCIENCE
 Plugin 'jcfaria/Vim-R-plugin'
