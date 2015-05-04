@@ -31,3 +31,6 @@ map <leader>r :NERDTreeFind<cr>
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
+
+" Dash.vim
+nmap <silent> <leader>d <Plug>DashSearch
