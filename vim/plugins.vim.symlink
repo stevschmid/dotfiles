@@ -47,6 +47,7 @@ Plugin 'kchmck/vim-coffee-script' " Gimme dat coffeescript support plox
 Plugin 'tikhomirov/vim-glsl' " GLSL Support
 Plugin 'octol/vim-cpp-enhanced-highlight' " Enhanced C++ support
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'plasticboy/vim-markdown'
 
 " SCIENCE
 Plugin 'jcfaria/Vim-R-plugin'
