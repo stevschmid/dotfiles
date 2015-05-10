@@ -48,6 +48,7 @@ Plugin 'tikhomirov/vim-glsl' " GLSL Support
 Plugin 'octol/vim-cpp-enhanced-highlight' " Enhanced C++ support
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'fatih/vim-go'
 
 " SCIENCE
 Plugin 'jcfaria/Vim-R-plugin'
