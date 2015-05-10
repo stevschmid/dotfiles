@@ -14,11 +14,11 @@ set -sg escape-time 0
 # http://superuser.com/questions/231130/unable-to-use-pbcopy-while-in-tmux-session
 # interface
 
-# Enable mouse
-set -g mode-mouse on
-set -g mouse-select-window on
-set -g mouse-select-pane on
-set -g mouse-resize-pane on
+# No mouserino! Keep it efficient bra!
+set -g mode-mouse off
+set -g mouse-select-window off
+set -g mouse-select-pane off
+set -g mouse-resize-pane off
 
 # Enable VIM mode
 setw -g mode-keys vi
@@ -68,6 +68,16 @@ bind -n C-k run "(tmux display-message -p '#{pane_current_command}' | grep -iqE 
 bind -n C-l run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)vim$' && tmux send-keys C-l) || tmux select-pane -R"
 bind -n C-\ run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)vim$' && tmux send-keys 'C-\\') || tmux select-pane -l"
 
+# Move between windows
+bind -r C-h select-window -t :-
+bind -r C-l select-window -t :+
+
+# Enable resizing with HJKL
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
+
 # http://robots.thoughtbot.com/how-to-copy-and-paste-with-tmux-on-mac-os-x
 set-option -g default-command "reattach-to-user-namespace -l zsh"
 
@@ -81,8 +91,23 @@ set -g pane-base-index 1
 # Clear screen
 bind C-k send-keys 'C-l'
 
-# Open splits in current dir
-bind '"' split-window -c "#{pane_current_path}"
-bind % split-window -h -c "#{pane_current_path}"
+# Better splits in current dir
+bind - split-window -c "#{pane_current_path}"
+bind | split-window -h -c "#{pane_current_path}"
 bind c new-window -c "#{pane_current_path}"
 
+# Use swaggier prefix (make sure to remap caps lock to Ctrl for more efficiency)
+set -g prefix 'C-\'
+
+# Reload tmux conf
+bind r source-file ~/.tmux.conf \; display "Reloaded!"
+
+# Use more vimesque copy'n'pasterino
+# Setup 'v' to begin selection as in Vim
+bind [ copy-mode
+bind-key -t vi-copy v begin-selection
+bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
+
+# Update default binding of `Enter` to also use copy-pipe
+unbind -t vi-copy Enter
+bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
