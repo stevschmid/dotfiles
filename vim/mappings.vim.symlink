@@ -1,3 +1,5 @@
+let mapleader = ","
+
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
@@ -18,19 +20,19 @@ nnoremap <silent> <leader>DQ :exe ":profile pause"<cr>:noautocmd qall!<cr>
 nnoremap K :Ag! "\b<C-R><C-W>\b"<CR>
 
 " ctrlP mappings
-nnoremap ,f :CtrlP<CR>
-nnoremap ,b :CtrlPBuffer<CR>
+nnoremap <leader>f :CtrlP<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
 
 " make n stuff
-nnoremap ,m :make!<CR>
-nnoremap ,a :cp<CR>
-nnoremap ,s :cn<CR>
+nnoremap <leader>m :make!<CR>
+nnoremap <leader>a :cp<CR>
+nnoremap <leader>s :cn<CR>
 
 " http://superuser.com/questions/195022/vim-how-to-synchronize-nerdtree-with-current-opened-tab-file-path
 map <leader>r :NERDTreeFind<cr>
 
 " Tagbar
-nmap <F8> :TagbarToggle<CR>
+nmap <leader>t :TagbarToggle<CR>
 
 " Dash.vim
 nmap <silent> <leader>d <Plug>DashSearch
