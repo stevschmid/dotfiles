@@ -49,7 +49,7 @@ fun! <SID>StripTrailingWhitespaces()
   %s/\s\+$//e
   call cursor(l, c)
 endfun
-autocmd FileType c,cpp,java,php,ruby,python,javascript,scala,elixir,go autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType c,cpp,java,php,ruby,python,javascript,scala,elixir autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 " persistent undo
 " http://stackoverflow.com/questions/5700389/using-vims-persistent-undo
