@@ -1,0 +1,37 @@
+# http://jeromedalbert.com/migrate-from-oh-my-zsh-to-prezto/
+function prompt_custom_precmd {
+  git-info
+}
+
+function git_time_since_last_commit {
+  local t=`git log -1 --pretty=format:"%ar" | sed 's/\([0-9]*\) \(.\).*/\1\2/'`
+  echo "$t"
+}
+
+function prompt_custom_setup {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+  prompt_opts=(cr percent subst)
+
+  # Load required functions.
+  autoload -Uz add-zsh-hook
+
+  # Add hook for calling git-info before each command.
+  add-zsh-hook precmd prompt_custom_precmd
+
+  # Set git-info parameters.
+  zstyle ':prezto:module:git:info' verbose 'yes'
+  zstyle ':prezto:module:git:info:branch' format '%F{green}%b%f'
+  zstyle ':prezto:module:git:info:clean' format '%F{green}✓%f '
+  zstyle ':prezto:module:git:info:dirty' format '%F{red}✗%f '
+  zstyle ':prezto:module:git:info:keys' format \
+    'prompt' '${git_info[rprompt]}%F{green}$(git_time_since_last_commit)%f $(coalesce "%b" "%p" "%c")' \
+    'rprompt' '%C%D'
+
+  # Define prompts.
+
+  PROMPT='%F{cyan}[%~]%f%F{green}$%f '
+  RPROMPT='${(e)git_info[prompt]}'
+}
+
+prompt_custom_setup "$@"

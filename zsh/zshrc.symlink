@@ -1,7 +1,7 @@
-export DOTFILES=$HOME/.dotfiles
+source ~/.zprezto/init.zsh
 
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+export TERM='screen-256color'
+export DOTFILES=$HOME/.dotfiles
 
 # DOTFILES STUFF
 # use .localrc for SUPER SECRET CRAP that you don't
@@ -11,51 +11,17 @@ then
   source ~/.localrc
 fi
 
-typeset -U config_files
+# typeset -U config_files
 config_files=($DOTFILES/**/*.zsh)
 
 # load the path files
-for file in ${(M)config_files:#*/path.zsh}
+for file in ${config_files}
 do
   source $file
 done
 
-# load everything but the path and completion files
-for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
-do
-  source $file
-done
-
-# initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
-
-# load every completion after autocomplete loads
-for file in ${(M)config_files:#*/completion.zsh}
-do
-  source $file
-done
-
-unset config_files
-# END OF DOTFILES STUFF
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="custom"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# vi-mode plugin feels broke
-plugins=(git osx ruby zsh-syntax-highlighting)
-
-source $ZSH/oh-my-zsh.sh
-
-# respect entered line for history search
-bindkey '\e[A' history-beginning-search-backward
-bindkey '\e[B' history-beginning-search-forward
+# I know what I'm doing
+unalias rm
 
 # B O X E N B O Y S
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
