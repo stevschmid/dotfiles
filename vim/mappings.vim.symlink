@@ -32,7 +32,11 @@ nnoremap <leader>s :cn<CR>
 map <leader>r :NERDTreeFind<cr>
 
 " Tagbar
-nmap <leader>t :TagbarToggle<CR>
+nmap <C-t> :TagbarToggle<CR>
 
 " Dash.vim
 nmap <silent> <leader>d <Plug>DashSearch
+
+" vim.go
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>t <Plug>(go-test)
