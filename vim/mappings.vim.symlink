@@ -1,4 +1,4 @@
-let mapleader = ","
+let mapleader = "\<Space>"
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
