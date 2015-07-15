@@ -1,6 +1,7 @@
 # general
 alias ls='ls -Gla'
 alias ll='ls -hl'
+alias history='history 1'
 function ff { find . -iname "*$1*" }
 alias fh='history | grep'
 
