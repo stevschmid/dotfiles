@@ -2,7 +2,7 @@
 source ~/.config/nvim/plugins.vim
 
 " My beloved colorscheme
-colo gruvbox
+colorscheme gruvbox
 set background=dark
 
 " Load mappings
