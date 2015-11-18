@@ -28,6 +28,9 @@ nnoremap <leader>m :make!<CR>
 nnoremap <leader>a :cp<CR>
 nnoremap <leader>s :cn<CR>
 
+" buffers
+map <leader>j :e#<CR>
+
 " http://superuser.com/questions/195022/vim-how-to-synchronize-nerdtree-with-current-opened-tab-file-path
 map <leader>r :NERDTreeFind<cr>
 
