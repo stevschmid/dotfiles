@@ -4,8 +4,10 @@ function prompt_custom_precmd {
 }
 
 function git_time_since_last_commit {
-  local t=`git log -1 --pretty=format:"%ar" | sed 's/\([0-9]*\) \(.\).*/\1\2/'`
-  echo "$t"
+  # really slow with current version of git
+  # local t=`git log -1 --pretty=format:"%ar" | sed 's/\([0-9]*\) \(.\).*/\1\2/'`
+  # echo "$t"
+  echo ""
 }
 
 function prompt_custom_setup {
