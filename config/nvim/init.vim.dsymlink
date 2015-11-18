@@ -144,7 +144,11 @@ if executable('ag')
 endif
 
 " use pymatcher for maximum warp speed
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+if !has('python')
+    echo 'In order to use pymatcher plugin, you need +python compiled vim'
+else
+    let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+endif
 
 " vimgo
 let g:go_highlight_functions = 1
@@ -152,6 +156,3 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-
-" Tagbar
-let g:tagbar_ctags_bin = '/opt/boxen/homebrew/bin/ctags'
