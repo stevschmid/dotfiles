@@ -8,10 +8,7 @@ setw -g alternate-screen on
 set -sg escape-time 0
 
 # No mouserino! Keep it efficient bra!
-set -g mode-mouse off
-set -g mouse-select-window off
-set -g mouse-select-pane off
-set -g mouse-resize-pane off
+set-option -g -q mouse off
 
 # Enable VIM mode
 setw -g mode-keys vi
@@ -104,3 +101,12 @@ bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
 # Update default binding of `Enter` to also use copy-pipe
 unbind -t vi-copy Enter
 bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
+
+# This allows you to press page up in normal mode and have it scroll back into the history. If you page down back to the bottom of the history, it automatically exits copy mode.
+bind-key -T root PPage if-shell -F "#{alternate_on}" "send-keys PPage" "copy-mode -e; send-keys PPage"
+bind-key -t vi-copy PPage page-up
+bind-key -t vi-copy NPage page-down
+
+# These options allow you do have different styles for active and non-active panes.
+set-window-option -g window-style 'bg=#181818'
+set-window-option -g window-active-style 'bg=black'
