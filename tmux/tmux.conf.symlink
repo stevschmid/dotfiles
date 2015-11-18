@@ -90,7 +90,7 @@ bind | split-window -h -c "#{pane_current_path}"
 bind c new-window -c "#{pane_current_path}"
 
 # Use swaggier prefix (make sure to remap caps lock to Ctrl for more efficiency)
-set -g prefix 'C-\'
+set -g prefix 'C-a'
 
 # Reload tmux conf
 bind r source-file ~/.tmux.conf \; display "Reloaded!"
