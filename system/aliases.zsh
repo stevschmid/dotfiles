@@ -12,3 +12,5 @@ alias b='bundle'
 
 alias vim='mvim -v --servername VIM'
 alias vimed='cd ~/.dotfiles; vim ~/.vimrc ~/.*.vim'
+alias ga='git add'
+alias gap='git add -p .'
