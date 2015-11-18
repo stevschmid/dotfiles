@@ -11,6 +11,6 @@ alias qq='touch tmp/restart.txt'
 alias b='bundle'
 
 alias vim='mvim -v --servername VIM'
-alias vimed='cd ~/.dotfiles; vim ~/.vimrc ~/.*.vim'
+alias vimed='cd ~/.dotfiles; vim vim/vimrc.symlink vim/*.vim.symlink'
 alias ga='git add'
 alias gap='git add -p .'
