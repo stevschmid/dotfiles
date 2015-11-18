@@ -1,12 +1,12 @@
 " Load plugins
-source ~/.plugins.vim
+source ~/.config/nvim/plugins.vim
 
 " My beloved colorscheme
 colo gruvbox
 set background=dark
 
 " Load mappings
-source ~/.mappings.vim
+source ~/.config/nvim/mappings.vim
 
 " GENERAL VIM
 " Enable syntax highlighting
