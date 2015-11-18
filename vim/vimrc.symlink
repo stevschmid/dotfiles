@@ -2,7 +2,8 @@
 source ~/.plugins.vim
 
 " My beloved colorscheme
-colorscheme Tomorrow-Night-Eighties
+colo gruvbox
+set background=dark
 
 " Load mappings
 source ~/.mappings.vim

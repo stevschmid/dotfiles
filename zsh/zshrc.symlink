@@ -27,3 +27,7 @@ unalias mv
 
 # B O X E N B O Y S
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+
+# G R U V B O X B O Y S
+source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette_osx.sh"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -28,7 +28,8 @@ Plugin 'majutsushi/tagbar' " Tabgar for swaggy overview
 " NAVIGATION
 Plugin 'godlygeek/tabular' " Align ALL THE THINGS!
 Plugin 'kien/ctrlp.vim' " CtrlP for the simple-minded navigators
-Plugin 'Lokaltog/vim-easymotion' " Move baby move
+Plugin 'FelikZ/ctrlp-py-matcher' " Scotty, we NEED MORE SPEED!
+Plugin 'easymotion/vim-easymotion' " Move baby move
 Plugin 'christoomey/vim-tmux-navigator' " Tmux and Vim, the dream team
 Plugin 'scrooloose/nerdtree'
 
@@ -40,6 +41,9 @@ Plugin 'scrooloose/syntastic' " Check my code, it's full of syntactic sugar!
 Plugin 'airblade/vim-gitgutter' " Sexy git diffs you say?
 Plugin 'bling/vim-airline' " My skin, so smooth
 Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Plugin 'morhetz/gruvbox.git'
+Plugin 'w0ng/vim-hybrid'
+Plugin 'junegunn/seoul256.vim'
 
 " FILE FORMAT SUPPORT
 Plugin 'netdata/vim-puppet' " Automatic poeppet alignment, count me in!
@@ -49,13 +53,16 @@ Plugin 'octol/vim-cpp-enhanced-highlight' " Enhanced C++ support
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'fatih/vim-go'
+Plugin 'tpope/vim-rails'
 
 " SCIENCE
+Plugin 'jalvesaq/R-Vim-runtime'
 Plugin 'jcfaria/Vim-R-plugin'
 let vimrplugin_vsplit = 1 " vertical split
 let vimrplugin_assign = 2 " turn double _ into <-
 Plugin 'ervandew/screen' " needed for VimLab
 Plugin 'dajero/VimLab'
+Plugin 'ivanov/vim-ipython'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
