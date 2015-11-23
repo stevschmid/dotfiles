@@ -24,16 +24,19 @@ function prompt_custom_setup {
   # Set git-info parameters.
   zstyle ':prezto:module:git:info' verbose 'yes'
   zstyle ':prezto:module:git:info:branch' format '%F{green}%b%f'
-  zstyle ':prezto:module:git:info:clean' format '%F{green}✓%f '
-  zstyle ':prezto:module:git:info:dirty' format '%F{red}✗%f '
+  zstyle ':prezto:module:git:info:clean' format '%F{green}%f'
+  zstyle ':prezto:module:git:info:dirty' format '%F{red}*%f'
   zstyle ':prezto:module:git:info:keys' format \
-    'prompt' '${git_info[rprompt]}%F{green}$(git_time_since_last_commit)%f $(coalesce "%b" "%p" "%c")' \
+    'prompt' '%F{blue}git%f %F{red}$(coalesce "%b" "%p" "%c")${git_info[rprompt]} %F{yellow}→%f ' \
     'rprompt' '%C%D'
 
   # Define prompts.
 
   PROMPT='%F{cyan}[%~]%f%F{green}$%f '
   RPROMPT='${(e)git_info[prompt]}'
+
+  PROMPT='%F{yellow}λ%f %F{cyan}%1~%f %F{yellow}→%f ${(e)git_info[prompt]}'
+  RPROMPT=''
 }
 
 prompt_custom_setup "$@"
