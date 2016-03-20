@@ -54,6 +54,8 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-rails'
+Plugin 'pangloss/vim-javascript' " required for vim-jsx
+Plugin 'mxw/vim-jsx'
 
 " SCIENCE
 Plugin 'jalvesaq/R-Vim-runtime'

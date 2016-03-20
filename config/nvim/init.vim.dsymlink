@@ -165,5 +165,9 @@ let g:go_highlight_build_constraints = 1
 
 " ag.vim
 let g:ag_working_path_mode="r" " You can configure ag.vim to always start searching from your project root instead of the cwd
+
+" vim-jsx
+let g:jsx_ext_required = 0
+
 " fix slow loading of ftplugin/ruby.vim
 let g:ruby_path = system('rbenv prefix')
