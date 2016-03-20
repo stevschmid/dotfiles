@@ -39,7 +39,7 @@ Plugin 'scrooloose/syntastic' " Check my code, it's full of syntactic sugar!
 
 " DISPLAY
 Plugin 'airblade/vim-gitgutter' " Sexy git diffs you say?
-Plugin 'bling/vim-airline' " My skin, so smooth
+Plugin 'itchyny/lightline.vim'
 Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Plugin 'morhetz/gruvbox.git'
 Plugin 'w0ng/vim-hybrid'
