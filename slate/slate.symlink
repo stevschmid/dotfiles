@@ -36,6 +36,6 @@ bind f10:cmd ${leftspec}
 bind f11:cmd ${rightspec}
 bind f10:cmd,shift ${leftspec_twothird}
 bind f11:cmd,shift ${rightspec_onethird}
-bind right:cmd,shift ${next_screen}
-bind left:cmd,shift ${prev_screen}
+bind left:cmd,shift ${next_screen}
+bind right:cmd,shift ${prev_screen}
 
