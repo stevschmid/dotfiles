@@ -14,3 +14,28 @@ alias vim=nvim #'mvim -v --servername VIM'
 alias vimed='cd ~/.dotfiles; vim ~/.config/nvim/init.vim ~/.config/nvim/mappings.vim ~/.config/nvim/plugins.vim'
 alias ga='git add'
 alias gap='git add -p .'
+
+function findfolder() {
+  echo `mdfind -onlyin $1 kind:folder $2 | grep -E "\/$2$" | awk '{ print length($0) " " $0; }' | sort -n | head -n1 | cut -d ' ' -f 2-`
+}
+
+function fd() {
+  local dir=`findfolder . $1`
+  if [[ $dir ]]; then
+    echo "cd to $dir"
+    cd $dir
+  else
+    echo "Not found: $1"
+  fi
+}
+
+function pd() {
+  local dir=`findfolder ~/projects $1`
+  if [[ $dir ]]; then
+    echo "cd to $dir"
+    cd $dir
+  else
+    echo "Not found: $1"
+  fi
+}
+
