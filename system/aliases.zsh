@@ -4,6 +4,7 @@ alias ll='ls -hl'
 alias history='history 1'
 function ff { find . -iname "*$1*" }
 alias fh='history | grep'
+alias ag='ag --pager less' 
 
 # ruby and development
 alias rc='rails console'
