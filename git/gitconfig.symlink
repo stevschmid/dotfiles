@@ -5,8 +5,5 @@ email = stevschmid@gmail.com
 [push]
 default = simple
 
-[alias]
-up = pull --rebase --autostash
-
 [core]
 excludesfile = /Users/spidy/.dotfiles/git/gitignore
