@@ -22,6 +22,7 @@ cask 'virtualbox'
 cask 'steam'
 cask 'spotify'
 cask 'vlc'
+cask 'bettertouchtool'
 
 # app store
 mas 'Pixelmator', id: 407963104
