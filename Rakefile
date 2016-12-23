@@ -44,6 +44,14 @@ namespace :bootstrap do
 
   desc 'Bootstrap zsh'
   task :zsh do
+    dir = File.expand_path('~/.zprezto')
+    puts dir
+    if Dir.exists?(dir)
+      sh "cd #{dir} && git pull && git submodule update --init --recursive"
+    else
+      sh "git clone --recursive git@github.com:sorin-ionescu/prezto.git #{dir}"
+    end
 
+    sh "cp #{DOTFILES}/prezto/custom_prompt #{dir}/modules/prompt/functions/prompt_custom_setup"
   end
 end

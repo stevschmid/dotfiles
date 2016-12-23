@@ -1,6 +1,7 @@
 cask_args appdir: '/Applications'
 
 tap 'caskroom/cask'
+tap 'caskroom/fonts'
 tap 'homebrew/versions'
 brew 'mas'
 
@@ -11,6 +12,7 @@ brew 'neovim'
 brew 'universal-ctags'
 
 # cask
+cask 'font-fira-code'
 cask 'google-chrome'
 cask 'iterm2'
 cask 'hammerspoon'
