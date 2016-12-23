@@ -28,10 +28,12 @@ task :link do
   end
 end
 
+desc 'Brew'
 task :brew do
-  sh 'brew bundle'
+  sh 'brew update && brew bundle'
 end
 
+desc 'Gems'
 task :gems do
   sh 'bundle install'
 end
@@ -59,18 +61,15 @@ namespace :bootstrap do
     sh "/usr/local/opt/fzf/install"
   end
 
-  desc 'Bootstrap dev'
-  task :dev do
-    sh './dev-setup.sh'
-  end
-
   desc 'Bootstrap macOS'
   task :macos do
     sh './mac/macos.sh'
   end
 
-  desc 'Bootstrap nginx/dnsmasq'
-  task :nginx do
+  desc 'Bootstrap dev nginx/dnsmasq'
+  task :dev do
     sh './nginx/install.sh'
+    sh 'sudo brew services restart dnsmasq'
+    sh 'sudo brew services restart nginx'
   end
 end
