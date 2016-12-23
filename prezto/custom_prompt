@@ -35,7 +35,7 @@ function prompt_custom_setup {
   PROMPT='%F{cyan}[%~]%f%F{green}$%f '
   RPROMPT='${(e)git_info[prompt]}'
 
-  PROMPT='%F{yellow}λ%f %F{cyan}%1~%f %F{yellow}→%f ${(e)git_info[prompt]}'
+  PROMPT='%F{yellow}Σ%f %F{cyan}%1~%f %F{yellow}→%f ${(e)git_info[prompt]}'
   RPROMPT=''
 }
 

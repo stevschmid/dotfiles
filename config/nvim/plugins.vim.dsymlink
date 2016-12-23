@@ -37,25 +37,26 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-endwise' " Put the end for me, please, I cannot bear the thought of actually writing 3 letters
 Plugin 'scrooloose/syntastic' " Check my code, it's full of syntactic sugar!
 
+" Plugins with alter the status line are laggy
+
 " DISPLAY
 Plugin 'airblade/vim-gitgutter' " Sexy git diffs you say?
-Plugin 'itchyny/lightline.vim'
 Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Plugin 'morhetz/gruvbox.git'
 Plugin 'w0ng/vim-hybrid'
-Plugin 'junegunn/seoul256.vim'
 
 " FILE FORMAT SUPPORT
 Plugin 'netdata/vim-puppet' " Automatic poeppet alignment, count me in!
 Plugin 'kchmck/vim-coffee-script' " Gimme dat coffeescript support plox
 Plugin 'tikhomirov/vim-glsl' " GLSL Support
 Plugin 'octol/vim-cpp-enhanced-highlight' " Enhanced C++ support
-Plugin 'elixir-lang/vim-elixir'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-rails'
 Plugin 'pangloss/vim-javascript' " required for vim-jsx
 Plugin 'mxw/vim-jsx'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'slashmili/alchemist.vim'
 
 " SCIENCE
 Plugin 'jalvesaq/R-Vim-runtime'
