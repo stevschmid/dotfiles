@@ -1,6 +1,8 @@
 require 'pathname'
 require 'fileutils'
 
+INSTALL_RUBY_VERSION = '2.3.1'
+
 DOTFILES = File.join(File.dirname(Pathname.new(__FILE__).realpath))
 
 desc 'Link dotfiles'
@@ -71,5 +73,13 @@ namespace :bootstrap do
     sh './nginx/install.sh'
     sh 'sudo brew services restart dnsmasq'
     sh 'sudo brew services restart nginx'
+  end
+
+  desc 'Bootstrap rbenv'
+  task :ruby do
+    sh "rbenv install #{INSTALL_RUBY_VERSION}"
+    sh "rbenv global #{INSTALL_RUBY_VERSION}"
+    sh "rbenv rehash"
+    sh "gem install bundler"
   end
 end

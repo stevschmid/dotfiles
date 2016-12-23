@@ -32,6 +32,7 @@ mas 'Tweetbot', id: 557168941
 # brew
 brew 'elixir'
 brew 'fzf'
+brew 'git'
 brew 'imagemagick'
 brew 'rbenv'
 brew 'nodenv'
