@@ -15,6 +15,7 @@ cask 'google-chrome'
 cask 'iterm2'
 cask 'hammerspoon'
 cask 'slack'
+cask 'smoothmouse' # not giving up on you yet ;_;
 cask 'sourcetree'
 cask 'vagrant'
 cask 'virtualbox'

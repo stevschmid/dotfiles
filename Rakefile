@@ -44,6 +44,7 @@ namespace :bootstrap do
 
   desc 'Bootstrap zsh'
   task :zsh do
+    # prezto
     dir = File.expand_path('~/.zprezto')
     puts dir
     if Dir.exists?(dir)
@@ -53,10 +54,23 @@ namespace :bootstrap do
     end
 
     sh "cp #{DOTFILES}/prezto/custom_prompt #{dir}/modules/prompt/functions/prompt_custom_setup"
+
+    # fzf
+    sh "/usr/local/opt/fzf/install"
   end
 
   desc 'Bootstrap dev'
   task :dev do
     sh './dev-setup.sh'
+  end
+
+  desc 'Bootstrap macOS'
+  task :macos do
+    sh './mac/macos.sh'
+  end
+
+  desc 'Bootstrap nginx/dnsmasq'
+  task :nginx do
+    sh './nginx/install.sh'
   end
 end
