@@ -37,13 +37,13 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-endwise' " Put the end for me, please, I cannot bear the thought of actually writing 3 letters
 Plugin 'scrooloose/syntastic' " Check my code, it's full of syntactic sugar!
 
+" Plugins with alter the status line are laggy
+
 " DISPLAY
 Plugin 'airblade/vim-gitgutter' " Sexy git diffs you say?
-Plugin 'itchyny/lightline.vim'
 Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Plugin 'morhetz/gruvbox.git'
 Plugin 'w0ng/vim-hybrid'
-Plugin 'junegunn/seoul256.vim'
 
 " FILE FORMAT SUPPORT
 Plugin 'netdata/vim-puppet' " Automatic poeppet alignment, count me in!
