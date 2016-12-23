@@ -54,4 +54,9 @@ namespace :bootstrap do
 
     sh "cp #{DOTFILES}/prezto/custom_prompt #{dir}/modules/prompt/functions/prompt_custom_setup"
   end
+
+  desc 'Bootstrap dev'
+  task :dev do
+    sh './dev-setup.sh'
+  end
 end
