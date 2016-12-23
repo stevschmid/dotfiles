@@ -1,3 +1,5 @@
+" vim: filetype=vim
+
 " Load plugins
 source ~/.config/nvim/plugins.vim
 
@@ -22,8 +24,8 @@ set hidden
 " Disable folding by default
 set nofoldenable
 
-set nohlsearch                      " highlight matches
-set incsearch                     " incremental searching
+set nohlsearch
+set incsearch
 
 " Whitespace
 set nowrap                        " don't wrap lines
@@ -44,7 +46,7 @@ set listchars+=precedes:<         " The character to show in the first column wh
 " set showcmd " Super laggy DansGame with it on
 set number " enable line numbers by default
 
-autocmd FileType qf setlocal wrap linebreak " enable line wrapping in the quickfix window
+" autocmd FileType qf setlocal wrap linebreak " enable line wrapping in the quickfix window
 
 " remove trailing spaces
 fun! <SID>StripTrailingWhitespaces()
@@ -103,33 +105,14 @@ set cino=g0
 " same appearance as your line number column
 highlight clear SignColumn
 
-let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component': {
-      \   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
-      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-      \ },
-      \ 'component_visible_condition': {
-      \   'readonly': '(&filetype!="help"&& &readonly)',
-      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-      \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
-      \ }
-
-set laststatus=2
+set laststatus=0
 
 " vim-gitgutter symbols
-let g:gitgutter_sign_added = '⇒'
-let g:gitgutter_sign_modified = '⇔'
-let g:gitgutter_sign_removed = '⇐'
-let g:gitgutter_sign_modified_removed = '⇐'
+let g:gitgutter_sign_added = '++'
+let g:gitgutter_sign_modified = '~~'
+let g:gitgutter_sign_removed = '--'
+let g:gitgutter_sign_removed_first_line = '^^'
+let g:gitgutter_sign_modified_removed = '~_'
 
 " syntastic
 let g:syntastic_error_symbol='X'
@@ -149,13 +132,6 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-" vimgo
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-
 " ag.vim
 let g:ag_working_path_mode="r" " You can configure ag.vim to always start searching from your project root instead of the cwd
 
@@ -164,3 +140,13 @@ let g:jsx_ext_required = 0
 
 " fix slow loading of ftplugin/ruby.vim
 let g:ruby_path = system('rbenv prefix')
+
+" NERDTree
+" automatically close NerdTree when you open a file
+let NERDTreeQuitOnOpen = 1
+" automatically close a tab if the only remaining window is NerdTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" misc
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1

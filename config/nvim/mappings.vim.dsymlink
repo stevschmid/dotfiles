@@ -1,3 +1,5 @@
+" vim: filetype=vim
+
 let mapleader = "\<Space>"
 
 " Get off my lawn
@@ -7,7 +9,7 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 " gundo.vim
-nnoremap <F6> :GundoToggle<CR>
+nnoremap <leader>g :GundoToggle<CR>
 
 " NERDtree
 map <C-n> :NERDTreeToggle<CR>
@@ -23,11 +25,6 @@ nnoremap K :Ag! "\b<C-R><C-W>\b"<CR>
 nnoremap <leader>f :CtrlP<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 
-" make n stuff
-nnoremap <leader>m :make!<CR>
-nnoremap <leader>a :cp<CR>
-nnoremap <leader>s :cn<CR>
-
 " buffers
 map <leader>j :e#<CR>
 
@@ -35,11 +32,7 @@ map <leader>j :e#<CR>
 map <leader>r :NERDTreeFind<cr>
 
 " Tagbar
-nmap <C-t> :TagbarToggle<CR>
+map <leader>t :TagbarToggle<CR>
 
-" Dash.vim
-nmap <silent> <leader>d <Plug>DashSearch
-
-" vim.go
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>t <Plug>(go-test)
+" paste -> put the old contents in clipboards again
+xnoremap p pgvy
