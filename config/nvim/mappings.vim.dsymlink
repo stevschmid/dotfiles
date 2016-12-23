@@ -21,9 +21,10 @@ nnoremap <silent> <leader>DQ :exe ":profile pause"<cr>:noautocmd qall!<cr>
 " bind K to search for word under cursor
 nnoremap K :Ag! "\b<C-R><C-W>\b"<CR>
 
-" ctrlP mappings
-nnoremap <leader>f :CtrlP<CR>
-nnoremap <leader>b :CtrlPBuffer<CR>
+" fzf.vim mappings
+map <C-p> :Files<CR>
+map <leader>f :Files<CR>
+map <leader>b :Buffers<CR>
 
 " buffers
 map <leader>j :e#<CR>

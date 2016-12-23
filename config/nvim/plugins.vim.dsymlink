@@ -27,7 +27,8 @@ Plugin 'majutsushi/tagbar' " Tabgar for swaggy overview
 
 " NAVIGATION
 Plugin 'godlygeek/tabular' " Align ALL THE THINGS!
-Plugin 'kien/ctrlp.vim' " CtrlP for the simple-minded navigators
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 Plugin 'easymotion/vim-easymotion' " Move baby move
 Plugin 'christoomey/vim-tmux-navigator' " Tmux and Vim, the dream team
 Plugin 'scrooloose/nerdtree'
