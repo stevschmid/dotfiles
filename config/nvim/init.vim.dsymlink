@@ -143,7 +143,7 @@ let g:ruby_path = system('rbenv prefix')
 
 " NERDTree
 " automatically close NerdTree when you open a file
-let NERDTreeQuitOnOpen = 1
+" let NERDTreeQuitOnOpen = 1
 " automatically close a tab if the only remaining window is NerdTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " misc

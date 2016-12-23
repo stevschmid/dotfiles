@@ -1,0 +1,15 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    awesome_print (1.7.0)
+    teamocil (1.4.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  awesome_print
+  teamocil
+
+BUNDLED WITH
+   1.13.6

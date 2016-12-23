@@ -2,9 +2,8 @@
 alias ls='ls -Gla'
 alias ll='ls -hl'
 alias history='history 1'
-function ff { find . -iname "*$1*" }
 alias fh='history | grep'
-alias ag='ag --pager less' 
+alias ag='ag --pager less'
 
 # ruby and development
 alias rc='rails console'
@@ -39,4 +38,3 @@ function pd() {
     echo "Not found: $1"
   fi
 }
-
