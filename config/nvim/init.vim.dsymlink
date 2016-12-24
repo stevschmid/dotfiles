@@ -105,7 +105,7 @@ set cino=g0
 " same appearance as your line number column
 highlight clear SignColumn
 
-set laststatus=0
+set laststatus=2
 
 " vim-gitgutter symbols
 let g:gitgutter_sign_added = '++'

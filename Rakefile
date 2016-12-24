@@ -60,7 +60,10 @@ namespace :bootstrap do
     sh "cp #{DOTFILES}/prezto/custom_prompt #{dir}/modules/prompt/functions/prompt_custom_setup"
 
     # fzf
-    sh "/usr/local/opt/fzf/install"
+    sh '/usr/local/opt/fzf/install'
+
+    # fix compdump/slow zsh loading on macOS sierra
+    sh 'compaudit | xargs chmod g-w'
   end
 
   desc 'Bootstrap macOS'
