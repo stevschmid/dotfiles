@@ -43,7 +43,7 @@ end
 namespace :bootstrap do
   desc 'Bootstrap vim'
   task :vim do
-    sh "vim -c ':BundleInstall' -c ':quitall'"
+    sh "nvim -c ':BundleInstall'"
   end
 
   desc 'Bootstrap zsh'
