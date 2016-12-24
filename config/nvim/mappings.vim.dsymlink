@@ -1,3 +1,5 @@
+" vim: filetype=vim
+
 let mapleader = "\<Space>"
 
 " Get off my lawn
@@ -7,7 +9,7 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 " gundo.vim
-nnoremap <F6> :GundoToggle<CR>
+nnoremap <leader>g :GundoToggle<CR>
 
 " NERDtree
 map <C-n> :NERDTreeToggle<CR>
@@ -19,14 +21,10 @@ nnoremap <silent> <leader>DQ :exe ":profile pause"<cr>:noautocmd qall!<cr>
 " bind K to search for word under cursor
 nnoremap K :Ag! "\b<C-R><C-W>\b"<CR>
 
-" ctrlP mappings
-nnoremap <leader>f :CtrlP<CR>
-nnoremap <leader>b :CtrlPBuffer<CR>
-
-" make n stuff
-nnoremap <leader>m :make!<CR>
-nnoremap <leader>a :cp<CR>
-nnoremap <leader>s :cn<CR>
+" fzf.vim mappings
+map <C-p> :Files<CR>
+map <leader>f :Files<CR>
+map <leader>b :Buffers<CR>
 
 " buffers
 map <leader>j :e#<CR>
@@ -35,11 +33,7 @@ map <leader>j :e#<CR>
 map <leader>r :NERDTreeFind<cr>
 
 " Tagbar
-nmap <C-t> :TagbarToggle<CR>
+map <leader>t :TagbarToggle<CR>
 
-" Dash.vim
-nmap <silent> <leader>d <Plug>DashSearch
-
-" vim.go
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>t <Plug>(go-test)
+" paste -> put the old contents in clipboards again
+xnoremap p pgvy

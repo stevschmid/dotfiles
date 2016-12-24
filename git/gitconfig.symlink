@@ -1,0 +1,9 @@
+[user]
+name = Steven Schmid
+email = stevschmid@gmail.com
+
+[push]
+default = simple
+
+[core]
+excludesfile = /Users/spidy/.dotfiles/git/gitignore
