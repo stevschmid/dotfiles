@@ -33,6 +33,7 @@ Plugin 'easymotion/vim-easymotion' " Move baby move
 Plugin 'christoomey/vim-tmux-navigator' " Tmux and Vim, the dream team
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'justinmk/vim-sneak'
 
 " AUTOMAGIC
 Plugin 'tpope/vim-endwise' " Put the end for me, please, I cannot bear the thought of actually writing 3 letters

@@ -37,3 +37,9 @@ map <leader>t :TagbarToggle<CR>
 
 " paste -> put the old contents in clipboards again
 xnoremap p pgvy
+
+" just map W to w
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q

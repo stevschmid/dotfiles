@@ -48,3 +48,4 @@ brew 'postgresql', restart_service: :changed, start_service: true
 brew 'dnsmasq', restart_service: :changed, start_service: true
 brew 'rabbitmq', restart_service: :changed, start_service: true
 brew 'nginx', restart_service: :changed, start_service: true
+brew 'redis', restart_service: :changed, start_service: true
