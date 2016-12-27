@@ -1,8 +1,9 @@
 cask_args appdir: '/Applications'
 
-tap 'caskroom/cask'
 tap 'homebrew/versions'
 tap 'homebrew/services'
+tap 'caskroom/cask'
+tap 'caskroom/fonts'
 brew 'mas'
 
 # neovim
