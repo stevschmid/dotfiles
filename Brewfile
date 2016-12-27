@@ -24,6 +24,7 @@ cask 'steam'
 cask 'spotify'
 cask 'vlc'
 cask 'bettertouchtool'
+cask 'font-fira-code'
 
 # app store
 mas 'Pixelmator', id: 407963104
