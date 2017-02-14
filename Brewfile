@@ -44,6 +44,7 @@ brew 'the_silver_searcher'
 brew 'tig'
 brew 'tmux'
 brew 'zsh'
+brew 'python'
 
 # services
 brew 'postgresql', restart_service: :changed, start_service: true
