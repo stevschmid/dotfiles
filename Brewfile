@@ -48,6 +48,7 @@ brew 'zsh'
 brew 'python'
 brew 'fpp'
 brew 'ripgrep'
+brew 'node'
 
 # services
 brew 'postgresql', restart_service: :changed, start_service: true
