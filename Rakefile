@@ -32,7 +32,7 @@ end
 
 desc 'Brew'
 task :brew do
-  sh 'brew update && brew bundle'
+  sh 'brew update && brew bundle && brew upgrade'
 end
 
 desc 'Gems'
