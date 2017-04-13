@@ -26,6 +26,7 @@ cask 'spotify'
 cask 'vlc'
 cask 'bettertouchtool'
 cask 'font-fira-code'
+cask 'font-input-mono'
 
 # app store
 mas 'Pixelmator', id: 407963104
@@ -45,6 +46,7 @@ brew 'tig'
 brew 'tmux'
 brew 'zsh'
 brew 'python'
+brew 'fpp'
 
 # services
 brew 'postgresql', restart_service: :changed, start_service: true
