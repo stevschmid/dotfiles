@@ -6,3 +6,4 @@ export HOMEBREW_NO_ANALYTICS=1
 # https://github.com/neovim/neovim/issues/2048
 # does not work anymore, wait for new build (latest comments)
 # export TERMINFO="$HOME/.terminfo" 
+export FZF_DEFAULT_OPTS='--exact'
