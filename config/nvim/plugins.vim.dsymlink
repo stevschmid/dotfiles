@@ -33,6 +33,7 @@ Plugin 'easymotion/vim-easymotion' " Move baby move
 Plugin 'christoomey/vim-tmux-navigator' " Tmux and Vim, the dream team
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'octref/RootIgnore'
 Plugin 'justinmk/vim-sneak'
 
 " AUTOMAGIC
