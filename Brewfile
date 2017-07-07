@@ -47,6 +47,7 @@ brew 'tmux'
 brew 'zsh'
 brew 'python'
 brew 'fpp'
+brew 'ripgrep'
 
 # services
 brew 'postgresql', restart_service: :changed, start_service: true
