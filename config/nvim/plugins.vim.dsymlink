@@ -58,6 +58,8 @@ Plugin 'pangloss/vim-javascript' " required for vim-jsx
 Plugin 'mxw/vim-jsx'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'rhysd/vim-clang-format'
+Plugin 'kana/vim-operator-user' " ={ to indent whole block, easy boys
 
 " SCIENCE
 Plugin 'jalvesaq/R-Vim-runtime'
