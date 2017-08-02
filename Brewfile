@@ -49,6 +49,7 @@ brew 'python'
 brew 'fpp'
 brew 'ripgrep'
 brew 'node'
+brew 'clang-format'
 
 # services
 brew 'postgresql', restart_service: :changed, start_service: true
