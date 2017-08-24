@@ -163,3 +163,7 @@ set cino+=(0
 " use clang format
 " autocmd FileType c,cpp setlocal equalprg=clang-format\ -style=file\ -assume-filename=%
 autocmd FileType c,cpp,objc map <buffer> = <Plug>(operator-clang-format)
+
+" gimme dat hardmode fam
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>

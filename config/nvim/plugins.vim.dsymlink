@@ -37,6 +37,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'octref/RootIgnore'
 Plugin 'justinmk/vim-sneak'
+Plugin 'wikitopian/hardmode'
 
 " AUTOMAGIC
 Plugin 'tpope/vim-endwise' " Put the end for me, please, I cannot bear the thought of actually writing 3 letters
