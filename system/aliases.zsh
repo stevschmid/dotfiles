@@ -3,7 +3,6 @@ alias ls='ls -Gla'
 alias ll='ls -hl'
 alias history='history 1'
 alias fh='history | grep'
-# alias ag='ag --pager less'
 
 # ruby and development
 alias rc='rails console'
@@ -17,7 +16,7 @@ alias ga='git add'
 alias gap='git add -p .'
 
 function replace() {
-  ag -l "$1" | xargs sed -i '' -e "s/$1/$2/g"
+  rg -l "$1" | xargs sed -i '' -e "s/$1/$2/g"
 }
 
 function findfolder() {
