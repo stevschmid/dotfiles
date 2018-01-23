@@ -10,6 +10,14 @@ function git_time_since_last_commit {
   echo ""
 }
 
+function prompt_custom_precmd {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+
+  _prompt_custom_pwd=$(prompt-pwd)
+  vcs_info 'prompt'
+}
+
 function prompt_custom_setup {
   setopt LOCAL_OPTIONS
   unsetopt XTRACE KSH_ARRAYS
@@ -17,25 +25,31 @@ function prompt_custom_setup {
 
   # Load required functions.
   autoload -Uz add-zsh-hook
+  autoload -Uz vcs_info # apparently faster than zpreztos git-info
 
   # Add hook for calling git-info before each command.
   add-zsh-hook precmd prompt_custom_precmd
 
   # Set git-info parameters.
-  zstyle ':prezto:module:git:info' verbose 'yes'
-  zstyle ':prezto:module:git:info:branch' format '%F{green}%b%f'
-  zstyle ':prezto:module:git:info:clean' format '%F{green}%f'
-  zstyle ':prezto:module:git:info:dirty' format '%F{red}*%f'
-  zstyle ':prezto:module:git:info:keys' format \
-    'prompt' '%F{blue}git%f %F{red}$(coalesce "%b" "%p" "%c")${git_info[rprompt]} %F{yellow}→%f ' \
-    'rprompt' '%C%D'
+  #"%F{blue}git%f %F{red}$(coalesce "%b" "%p" "%c") %F{yellow}→%f "
+  #
+  local branch_format="%F{blue}git%f %F{green}%b%u%c%f %F{yellow}→%f "
+  local action_format="%F{blue}git%f %F{green}%a %F{yellow}→%f "
+
+  local unstaged_format="%F{red}*%f"
+  local staged_format="%F{red}*%f"
+
+  # https://github.com/sorin-ionescu/prezto/blob/master/modules/prompt/functions/prompt_steeef_setup
+  zstyle ':vcs_info:*' enable bzr git hg svn
+  zstyle ':vcs_info:*:prompt:*' check-for-changes true
+  zstyle ':vcs_info:*:prompt:*' unstagedstr "${unstaged_format}"
+  zstyle ':vcs_info:*:prompt:*' stagedstr "${staged_format}"
+  zstyle ':vcs_info:*:prompt:*' actionformats "${branch_format}${action_format}"
+  zstyle ':vcs_info:*:prompt:*' formats "${branch_format}"
+  zstyle ':vcs_info:*:prompt:*' nvcsformats ""
 
   # Define prompts.
-
-  PROMPT='%F{cyan}[%~]%f%F{green}$%f '
-  RPROMPT='${(e)git_info[prompt]}'
-
-  PROMPT='%F{yellow}ツ%f%F{cyan}%1~%f %F{yellow}→%f ${(e)git_info[prompt]}'
+  PROMPT='%F{yellow}Σ%f %F{cyan}${_prompt_custom_pwd}%f %F{yellow}→%f ${vcs_info_msg_0_}'
   RPROMPT=''
 }
 

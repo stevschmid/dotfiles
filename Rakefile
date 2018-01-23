@@ -57,7 +57,7 @@ namespace :bootstrap do
       sh "git clone --recursive git@github.com:sorin-ionescu/prezto.git #{dir}"
     end
 
-    sh "cp #{DOTFILES}/prezto/custom_prompt #{dir}/modules/prompt/functions/prompt_custom_setup"
+    FileUtils.ln_sf("#{DOTFILES}/prezto/custom_prompt", "#{dir}/modules/prompt/functions/prompt_custom_setup")
 
     # fzf
     sh '/usr/local/opt/fzf/install'
