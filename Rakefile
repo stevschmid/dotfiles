@@ -63,8 +63,15 @@ namespace :bootstrap do
     # fzf
     sh '/usr/local/opt/fzf/install'
 
+    # change default shell
+    # so iTerm2 loads zshrc before tmux
+    # zshrc sets $TERM
+    # ($TERM outside of tmux should be *256colors)
+    sh 'chsh -s /bin/zsh'
+
     # fix compdump/slow zsh loading on macOS sierra
-    sh 'compaudit | xargs chmod g-w'
+    # sh 'compaudit | xargs chmod g-w'
+    # meh compaudit doesn't output anything on high sierra
   end
 
   desc 'Bootstrap macOS'

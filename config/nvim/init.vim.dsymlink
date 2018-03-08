@@ -4,8 +4,9 @@
 source ~/.config/nvim/plugins.vim
 
 " My beloved colorscheme
-colorscheme gruvbox
+set termguicolors
 set background=dark
+colorscheme gruvbox
 
 " Load mappings
 source ~/.config/nvim/mappings.vim

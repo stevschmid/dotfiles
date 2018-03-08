@@ -26,9 +26,6 @@ alias ln='nocorrect ln'
 alias mv='nocorrect mv'
 alias rm='nocorrect rm'
 
-# G R U V B O X B O Y S
-source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette_osx.sh"
-
 # F Z F
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
