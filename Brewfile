@@ -1,6 +1,5 @@
 cask_args appdir: '/Applications'
 
-tap 'homebrew/versions'
 tap 'homebrew/services'
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
@@ -14,10 +13,11 @@ brew 'universal-ctags', args: ['HEAD']
 
 # cask
 cask 'google-chrome'
+cask 'firefox'
 cask 'iterm2'
 cask 'hammerspoon'
 cask 'slack'
-cask 'smoothmouse' # not giving up on you yet ;_;
+# cask 'smoothmouse' # we had helluva time buddy ;_;
 cask 'sourcetree'
 cask 'vagrant'
 cask 'virtualbox'

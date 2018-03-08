@@ -43,6 +43,7 @@ end
 namespace :bootstrap do
   desc 'Bootstrap vim'
   task :vim do
+    sh "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
     sh "nvim -c ':BundleInstall'"
   end
 
@@ -83,6 +84,6 @@ namespace :bootstrap do
     sh "rbenv install #{INSTALL_RUBY_VERSION}"
     sh "rbenv global #{INSTALL_RUBY_VERSION}"
     sh "rbenv rehash"
-    sh "gem install bundler"
+    # sh "gem install bundler" Make sure to setup terminal (zsh, rbenv init etc.)
   end
 end
