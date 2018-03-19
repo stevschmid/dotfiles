@@ -13,7 +13,7 @@ brew 'universal-ctags', args: ['HEAD']
 
 # cask
 cask 'google-chrome'
-cask 'firefox'
+# cask 'firefox'
 cask 'iterm2'
 cask 'hammerspoon'
 cask 'slack'

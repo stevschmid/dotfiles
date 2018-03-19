@@ -47,6 +47,8 @@ Plugin 'scrooloose/syntastic' " Check my code, it's full of syntactic sugar!
 
 " DISPLAY
 Plugin 'airblade/vim-gitgutter' " Sexy git diffs you say?
+set updatetime=100
+
 Plugin 'morhetz/gruvbox.git'
 
 " FILE FORMAT SUPPORT

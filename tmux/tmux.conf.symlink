@@ -114,10 +114,14 @@ bind r source-file ~/.tmux.conf \; display "Reloaded!"
 # Setup 'v' to begin selection as in Vim
 bind [ copy-mode
 
-bind-key -Tcopy-mode-vi 'v' send -X begin-selection
-bind-key -Tcopy-mode-vi 'y' send -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
-bind-key -Tcopy-mode-vi Escape send -X cancel
-bind-key -Tcopy-mode-vi V send -X rectangle-toggle
+bind-key -T copy-mode-vi 'v' send -X begin-selection
+bind-key -T copy-mode-vi 'y' send -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
+bind-key -T copy-mode-vi Escape send -X cancel
+bind-key -T copy-mode-vi V send -X rectangle-toggle
+
+bind-key -T root PPage if-shell -F "#{alternate_on}" "send-keys PPage" "copy-mode -e; send-keys PPage"
+bind-key -T copy-mode-vi PPage send-keys -X page-up
+bind-key -T copy-mode-vi NPage send-keys -X page-down
 
 # These options allow you do have different styles for active and non-active panes.
 set-window-option -g window-style 'bg=#181818'
