@@ -27,6 +27,7 @@ cask 'vlc'
 cask 'bettertouchtool'
 cask 'font-fira-code'
 cask 'font-input'
+cask 'amethyst' # tiling manager
 
 # app store
 mas 'Pixelmator', id: 407963104
