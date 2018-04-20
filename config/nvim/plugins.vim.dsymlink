@@ -20,7 +20,7 @@ Plugin 'tpope/vim-dispatch' " Building with tmux as easy as baking olive bread
 Plugin 'tpope/vim-repeat' " Plugins dig the dot
 Plugin 'tpope/vim-unimpaired' " Helpful mappings
 Plugin 'tpope/vim-commentary' " Comment dat baby out
-Plugin 'sjl/gundo.vim' " I don't use it much, but Nilsi swears on it!
+Plugin 'simnalamburt/vim-mundo' " I don't use it much, but Nilsi swears on it!
 " Plugin 'rking/ag.vim' " RIP grep
 Plugin 'jremmen/vim-ripgrep' " RIP ag
 Plugin 'ervandew/supertab' " Autocompletion tab
