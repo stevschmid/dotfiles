@@ -50,6 +50,7 @@ brew 'fpp'
 brew 'ripgrep'
 brew 'node'
 brew 'clang-format'
+brew 'rename'
 
 # services
 brew 'postgresql', restart_service: :changed, start_service: true
