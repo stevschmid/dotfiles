@@ -6,17 +6,14 @@ alias fh='history | grep'
 
 # ruby and development
 alias rc='rails console'
-alias qq='touch tmp/restart.txt'
 alias b='bundle'
 
 alias vim=nvim #'mvim -v --servername VIM'
 alias vimed='cd ~/.dotfiles; vim ~/.config/nvim/init.vim'
 alias dot='cd ~/.dotfiles'
-alias ga='git add'
-alias gap='git add -p .'
 
 function replace() {
-  rg -l "$1" | xargs sed -i '' -e "s/$1/$2/g"
+  rg -l "$1" | xargs sed -i '' -E 's/'$1'/'$2'/g'
 }
 
 function findfolder() {

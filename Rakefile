@@ -84,13 +84,14 @@ namespace :bootstrap do
     sh './nginx/install.sh'
     sh 'sudo brew services restart dnsmasq'
     sh 'sudo brew services restart nginx'
+    sh 'npm install -g prettier'
   end
 
   desc 'Bootstrap rbenv'
   task :ruby do
     sh "rbenv install #{INSTALL_RUBY_VERSION}"
     sh "rbenv global #{INSTALL_RUBY_VERSION}"
-    sh "rbenv rehash"
+    sh 'rbenv rehash'
     # sh "gem install bundler" Make sure to setup terminal (zsh, rbenv init etc.)
   end
 end

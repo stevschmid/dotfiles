@@ -165,6 +165,9 @@ set cino+=(0
 " autocmd FileType c,cpp setlocal equalprg=clang-format\ -style=file\ -assume-filename=%
 autocmd FileType c,cpp,objc map <buffer> = <Plug>(operator-clang-format)
 
+let g:prettier#autoformat = 0
+let g:prettier#exec_cmd_async = 1
+
 " gimme dat hardmode fam
 " autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 " nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>

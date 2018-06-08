@@ -56,6 +56,7 @@ Plugin 'netdata/vim-puppet' " Automatic poeppet alignment, count me in!
 Plugin 'kchmck/vim-coffee-script' " Gimme dat coffeescript support plox
 Plugin 'octol/vim-cpp-enhanced-highlight' " Enhanced C++ support
 Plugin 'plasticboy/vim-markdown'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'pangloss/vim-javascript' " required for vim-jsx
 Plugin 'mxw/vim-jsx'
@@ -63,6 +64,8 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'kana/vim-operator-user' " ={ to indent whole block, easy boys
+Plugin 'slim-template/vim-slim'
+Plugin 'prettier/vim-prettier' 
 
 " SCIENCE
 Plugin 'jalvesaq/R-Vim-runtime'

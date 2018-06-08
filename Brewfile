@@ -14,8 +14,7 @@ brew 'universal-ctags', args: ['HEAD']
 # cask
 cask 'google-chrome'
 # cask 'firefox'
-cask 'iterm2'
-cask 'hammerspoon'
+cask 'iterm2-beta' # M E T A L
 cask 'slack'
 # cask 'smoothmouse' # we had helluva time buddy ;_;
 cask 'sourcetree'
