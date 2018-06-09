@@ -65,7 +65,7 @@ Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'kana/vim-operator-user' " ={ to indent whole block, easy boys
 Plugin 'slim-template/vim-slim'
-Plugin 'prettier/vim-prettier' 
+Plugin 'w0rp/ale'
 
 " SCIENCE
 Plugin 'jalvesaq/R-Vim-runtime'
