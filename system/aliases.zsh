@@ -7,6 +7,7 @@ alias fh='history | grep'
 # ruby and development
 alias rc='rails console'
 alias b='bundle'
+alias sam='bundle install; yarn install; foreman start'
 
 alias vim=nvim #'mvim -v --servername VIM'
 alias vimed='cd ~/.dotfiles; vim ~/.config/nvim/init.vim'
