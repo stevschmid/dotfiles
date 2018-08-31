@@ -165,3 +165,7 @@ let $FZF_DEFAULT_COMMAND = 'rg --files'
 "
 " crontab on mac
 autocmd filetype crontab setlocal nobackup nowritebackup
+
+" Transparent bg
+hi Normal guibg=NONE ctermbg=NONE
+
