@@ -162,3 +162,6 @@ let $FZF_DEFAULT_COMMAND = 'rg --files'
 " gimme dat hardmode fam
 " autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 " nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+"
+" crontab on mac
+autocmd filetype crontab setlocal nobackup nowritebackup
