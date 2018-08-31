@@ -43,3 +43,7 @@ xnoremap p pgvy
 :command Wq wq
 :command W w
 :command Q q
+
+" tab, shift+tab to cycle through buffers
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>

@@ -26,14 +26,12 @@ set -g status-keys vi
 set -g pane-border-fg brightblack
 set -g pane-active-border-fg blue
 
-# status on top
-#set -g status-position top
-
 # status line
+set -g status-position top
 set -g status-justify left
-set -g status-bg black
+set -g status-bg '#181818'
 set -g status-fg white
-set -g status-interval 4
+set -g status-interval 1
 
 # messaging
 set -g message-fg black
@@ -41,13 +39,16 @@ set -g message-bg yellow
 set -g message-command-fg blue
 set -g message-command-bg black
 
-#window mode
+# window mode
 setw -g mode-bg colour6
 setw -g mode-fg colour0
 
 # window status
-setw -g window-status-format "#[fg=colour8]#[bg=white] #I #[bg=colour8]#[fg=white] #W#F"
-setw -g window-status-current-format "#[fg=black]#[bg=colour7] #I #[fg=black]#[bg=colour15] #W#F"
+# setw -g window-status-format "#[fg=colour8]#[bg=white] #I #[bg=colour8]#[fg=white] #W#F"
+# setw -g window-status-current-format "#[fg=black]#[bg=colour7] #I #[fg=black]#[bg=colour15] #W#F"
+setw -g window-status-format "(#I)#{b:pane_current_path}"
+setw -g window-status-current-format "(#I)#{b:pane_current_path}"
+setw -g window-status-current-fg yellow
 setw -g window-status-current-bg black
 setw -g window-status-current-attr bold
 
@@ -57,16 +58,6 @@ set -g status-right-length 80
 
 # Info on left (no session display)
 set -g status-left ''
-
-# Smart pane switching with awareness of vim splits
-# is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
-#     | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'"
-# bind-key -n C-h if-shell "$is_vim" "send-keys C-h"  "select-pane -L"
-# bind-key -n C-j if-shell "$is_vim" "send-keys C-j"  "select-pane -D"
-# bind-key -n C-k if-shell "$is_vim" "send-keys C-k"  "select-pane -U"
-# bind-key -n C-l if-shell "$is_vim" "send-keys C-l"  "select-pane -R"
-# bind-key -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
-# not_tmux='`echo "#{pane_current_command}" | grep -iqE "(^|\/)g?(view|n?vim?x?)(diff)?$"` || `echo "#T" | grep -iqE "(^|\/)fzf$"`'
 
 # Make it FZF compatible (https://github.com/junegunn/fzf/pull/582#issuecomment-230929094)
 not_tmux='`echo "#{pane_current_command}" | grep -iqE "(^|\/)g?(view|n?vim?x?)(diff)?$"` || `echo "#{pane_start_command}" | grep -iqE "fzf"` || `echo "#{pane_current_command}" | grep -iqE "fzf"`'
