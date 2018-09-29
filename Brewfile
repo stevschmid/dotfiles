@@ -13,43 +13,34 @@ brew 'universal-ctags', args: ['HEAD']
 
 # cask
 cask 'google-chrome'
-# cask 'firefox'
-cask 'iterm2-beta' # M E T A L
+cask 'firefox'
 cask 'slack'
 # cask 'smoothmouse' # we had helluva time buddy ;_;
-cask 'sourcetree'
-cask 'vagrant'
 cask 'virtualbox'
 cask 'steam'
 cask 'spotify'
 cask 'vlc'
-cask 'bettertouchtool'
-cask 'font-fira-code'
 cask 'font-input'
 cask 'amethyst' # tiling manager
 
 # app store
-mas 'Pixelmator', id: 407963104
-mas 'Tweetbot', id: 557168941
+mas 'PDFScanner', id: 410968114
 
 # brew
-brew 'elixir'
 brew 'fzf'
 brew 'git'
 brew 'imagemagick'
 brew 'rbenv'
+brew 'node'
 brew 'nodenv'
-brew 'pstree'
 brew 'reattach-to-user-namespace'
 brew 'tig'
 brew 'tmux'
 brew 'zsh'
-brew 'python'
-brew 'fpp'
 brew 'ripgrep'
-brew 'node'
 brew 'clang-format'
 brew 'rename'
+brew 'rust'
 
 # services
 brew 'postgresql', restart_service: :changed, start_service: true
