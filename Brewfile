@@ -41,6 +41,7 @@ brew 'ripgrep'
 brew 'clang-format'
 brew 'rename'
 brew 'rust'
+brew 'yarn'
 
 # services
 brew 'postgresql', restart_service: :changed, start_service: true
