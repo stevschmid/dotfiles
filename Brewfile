@@ -22,6 +22,7 @@ cask 'spotify'
 cask 'vlc'
 cask 'font-input'
 cask 'amethyst' # tiling manager
+cask 'github'
 
 # app store
 mas 'PDFScanner', id: 410968114
