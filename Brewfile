@@ -23,6 +23,7 @@ cask 'vlc'
 cask 'font-input'
 cask 'amethyst' # tiling manager
 cask 'github'
+cask 'flux'
 
 # app store
 mas 'PDFScanner', id: 410968114
@@ -43,6 +44,9 @@ brew 'clang-format'
 brew 'rename'
 brew 'rust'
 brew 'yarn'
+brew 'gpg'
+brew 's3cmd'
+brew 'python'
 
 # services
 brew 'postgresql', restart_service: :changed, start_service: true
