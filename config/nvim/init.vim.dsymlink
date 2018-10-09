@@ -140,6 +140,7 @@ let NERDTreeDirArrows = 1
 
 let loaded_netrwPlugin=1
 let NERDTreeRespectWildIgnore=1
+let NERDTreeWinSize=60
 
 " c++
 " fun( int a,
