@@ -40,6 +40,7 @@ brew 'tig'
 brew 'tmux'
 brew 'zsh'
 brew 'ripgrep'
+brew 'ag' # ff
 brew 'clang-format'
 brew 'rename'
 brew 'rust'
