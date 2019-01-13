@@ -24,6 +24,7 @@ cask 'font-input'
 cask 'amethyst' # tiling manager
 cask 'github'
 cask 'flux'
+cask 'alacritty'
 
 # app store
 mas 'PDFScanner', id: 410968114
