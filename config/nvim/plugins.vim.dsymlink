@@ -24,14 +24,14 @@ Plugin 'simnalamburt/vim-mundo' " I don't use it much, but Nilsi swears on it!
 " Plugin 'rking/ag.vim' " RIP grep
 Plugin 'jremmen/vim-ripgrep' " RIP ag
 Plugin 'ervandew/supertab' " Autocompletion tab
-Plugin 'ludovicchabant/vim-gutentags' " ctag management
-Plugin 'majutsushi/tagbar' " Tabgar for swaggy overview
+" Plugin 'ludovicchabant/vim-gutentags' " ctag management
+" Plugin 'majutsushi/tagbar' " Tabgar for swaggy overview
 
 " NAVIGATION
 Plugin 'godlygeek/tabular' " Align ALL THE THINGS!
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
-Plugin 'easymotion/vim-easymotion' " Move baby move
+" Plugin 'easymotion/vim-easymotion' " Move baby move
 Plugin 'christoomey/vim-tmux-navigator' " Tmux and Vim, the dream team
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -58,8 +58,8 @@ Plugin 'octol/vim-cpp-enhanced-highlight' " Enhanced C++ support
 Plugin 'plasticboy/vim-markdown'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
-Plugin 'pangloss/vim-javascript' " required for vim-jsx
-Plugin 'mxw/vim-jsx'
+" Plugin 'pangloss/vim-javascript' " required for vim-jsx
+" Plugin 'mxw/vim-jsx'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'rhysd/vim-clang-format'
