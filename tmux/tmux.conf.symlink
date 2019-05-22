@@ -46,8 +46,8 @@ setw -g mode-fg colour0
 # window status
 # setw -g window-status-format "#[fg=colour8]#[bg=white] #I #[bg=colour8]#[fg=white] #W#F"
 # setw -g window-status-current-format "#[fg=black]#[bg=colour7] #I #[fg=black]#[bg=colour15] #W#F"
-setw -g window-status-format "(#I)#{b:pane_current_path}"
-setw -g window-status-current-format "(#I)#{b:pane_current_path}"
+setw -g window-status-format "(#I)#{b:pane_current_path}#F"
+setw -g window-status-current-format "(#I)#{b:pane_current_path}#F"
 setw -g window-status-current-fg yellow
 setw -g window-status-current-bg black
 setw -g window-status-current-attr bold

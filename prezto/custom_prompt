@@ -49,7 +49,8 @@ function prompt_custom_setup {
   zstyle ':vcs_info:*:prompt:*' nvcsformats ""
 
   # Define prompts.
-  PROMPT='%F{yellow}Σ%f %F{cyan}${_prompt_custom_pwd}%f %F{yellow}→%f ${vcs_info_msg_0_}'
+  PROMPT='%F{yellow}🦑%f %F{cyan}${_prompt_custom_pwd}%f %F{yellow}→%f ${vcs_info_msg_0_}'
+  # PROMPT='%F{red}💎%f %F{cyan}${_prompt_custom_pwd}%f %F{yellow}→%f ${vcs_info_msg_0_}'
   RPROMPT=''
 }
 

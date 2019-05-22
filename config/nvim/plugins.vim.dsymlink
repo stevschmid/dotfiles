@@ -21,29 +21,27 @@ Plugin 'tpope/vim-repeat' " Plugins dig the dot
 Plugin 'tpope/vim-unimpaired' " Helpful mappings
 Plugin 'tpope/vim-commentary' " Comment dat baby out
 Plugin 'simnalamburt/vim-mundo' " I don't use it much, but Nilsi swears on it!
-" Plugin 'rking/ag.vim' " RIP grep
 Plugin 'jremmen/vim-ripgrep' " RIP ag
 Plugin 'ervandew/supertab' " Autocompletion tab
-" Plugin 'ludovicchabant/vim-gutentags' " ctag management
-" Plugin 'majutsushi/tagbar' " Tabgar for swaggy overview
+
+Plugin 'ludovicchabant/vim-gutentags' " ctag management
+Plugin 'majutsushi/tagbar' " Tabgar for swaggy overview
 
 " NAVIGATION
 Plugin 'godlygeek/tabular' " Align ALL THE THINGS!
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
-" Plugin 'easymotion/vim-easymotion' " Move baby move
 Plugin 'christoomey/vim-tmux-navigator' " Tmux and Vim, the dream team
 Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+" Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'octref/RootIgnore'
+Plugin 'tpope/vim-vinegar' " Split windows and the project drawer go together like oil and vinegar. 
+
 Plugin 'justinmk/vim-sneak'
-Plugin 'wikitopian/hardmode'
+let g:sneak#label = 1 " Try label-mode for a minimalist alternative to EasyMotion:
 
 " AUTOMAGIC
 Plugin 'tpope/vim-endwise' " Put the end for me, please, I cannot bear the thought of actually writing 3 letters
-Plugin 'scrooloose/syntastic' " Check my code, it's full of syntactic sugar!
-
-" PSA: Plugins with alter the status line are laggy
 
 " DISPLAY
 Plugin 'airblade/vim-gitgutter' " Sexy git diffs you say?
@@ -52,29 +50,30 @@ set updatetime=100
 Plugin 'morhetz/gruvbox.git'
 
 " FILE FORMAT SUPPORT
-Plugin 'netdata/vim-puppet' " Automatic poeppet alignment, count me in!
-Plugin 'kchmck/vim-coffee-script' " Gimme dat coffeescript support plox
-Plugin 'octol/vim-cpp-enhanced-highlight' " Enhanced C++ support
-Plugin 'plasticboy/vim-markdown'
-Plugin 'vim-ruby/vim-ruby'
+Plugin 'sheerun/vim-polyglot' " A solid language pack for Vim.
+" Plugin 'netdata/vim-puppet' " Automatic poeppet alignment, count me in!
+" Plugin 'kchmck/vim-coffee-script' " Gimme dat coffeescript support plox
+" Plugin 'octol/vim-cpp-enhanced-highlight' " Enhanced C++ support
+" Plugin 'plasticboy/vim-markdown'
+" Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 " Plugin 'pangloss/vim-javascript' " required for vim-jsx
 " Plugin 'mxw/vim-jsx'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'Vimjas/vim-python-pep8-indent'
-Plugin 'rhysd/vim-clang-format'
-Plugin 'kana/vim-operator-user' " ={ to indent whole block, easy boys
+" Plugin 'elixir-lang/vim-elixir'
+" Plugin 'Vimjas/vim-python-pep8-indent'
+" Plugin 'rhysd/vim-clang-format'
+" Plugin 'kana/vim-operator-user' " ={ to indent whole block, easy boys
 Plugin 'slim-template/vim-slim'
-Plugin 'w0rp/ale'
+" Plugin 'w0rp/ale' ' Crashing Culprit?
 
 " SCIENCE
-Plugin 'jalvesaq/R-Vim-runtime'
-Plugin 'jcfaria/Vim-R-plugin'
-let vimrplugin_vsplit = 1 " vertical split
-let vimrplugin_assign = 2 " turn double _ into <-
-Plugin 'ervandew/screen' " needed for VimLab
-Plugin 'dajero/VimLab'
-Plugin 'ivanov/vim-ipython'
+" Plugin 'jalvesaq/R-Vim-runtime'
+" Plugin 'jcfaria/Vim-R-plugin'
+" let vimrplugin_vsplit = 1 " vertical split
+" let vimrplugin_assign = 2 " turn double _ into <-
+" Plugin 'ervandew/screen' " needed for VimLab
+" Plugin 'dajero/VimLab'
+" Plugin 'ivanov/vim-ipython'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
