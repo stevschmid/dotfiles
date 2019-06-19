@@ -142,11 +142,6 @@ let loaded_netrwPlugin=1
 let NERDTreeRespectWildIgnore=1
 let NERDTreeWinSize=60
 
-" c++
-" fun( int a,
-"      int b )
-set cino+=(0
-
 " use clang format
 " autocmd FileType c,cpp setlocal equalprg=clang-format\ -style=file\ -assume-filename=%
 autocmd FileType c,cpp,objc map <buffer> = <Plug>(operator-clang-format)
