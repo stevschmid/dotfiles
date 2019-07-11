@@ -24,8 +24,8 @@ Plugin 'simnalamburt/vim-mundo' " I don't use it much, but Nilsi swears on it!
 Plugin 'jremmen/vim-ripgrep' " RIP ag
 Plugin 'ervandew/supertab' " Autocompletion tab
 
-Plugin 'ludovicchabant/vim-gutentags' " ctag management
-Plugin 'majutsushi/tagbar' " Tabgar for swaggy overview
+" Plugin 'ludovicchabant/vim-gutentags' " ctag management
+" Plugin 'majutsushi/tagbar' " Tabgar for swaggy overview
 
 " NAVIGATION
 Plugin 'godlygeek/tabular' " Align ALL THE THINGS!

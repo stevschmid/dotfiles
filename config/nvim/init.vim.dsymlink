@@ -146,12 +146,6 @@ let NERDTreeWinSize=60
 " autocmd FileType c,cpp setlocal equalprg=clang-format\ -style=file\ -assume-filename=%
 autocmd FileType c,cpp,objc map <buffer> = <Plug>(operator-clang-format)
 
-" ALE
-let g:ale_fixers = {
-\   'javascript': ['prettier'],
-\}
-nnoremap <leader>p :ALEFix<CR>
-
 " FZF
 let $FZF_DEFAULT_COMMAND = 'rg --files'
 
