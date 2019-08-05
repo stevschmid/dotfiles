@@ -33,8 +33,8 @@ function prompt_custom_setup {
   # Set git-info parameters.
   #"%F{blue}git%f %F{red}$(coalesce "%b" "%p" "%c") %F{yellow}→%f "
   #
-  local branch_format="%F{green}(%b%u%c%F{green})%f "
-  local action_format="%F{green}(%a%F{green})%f "
+  local branch_format="%F{green}%b%u%c%F{green} "
+  local action_format="%F{green}%a%F{green} "
 
   local unstaged_format="%F{red}*%f"
   local staged_format="%F{red}*%f"
@@ -49,7 +49,7 @@ function prompt_custom_setup {
   zstyle ':vcs_info:*:prompt:*' nvcsformats ""
 
   # Define prompts.
-  PROMPT='🦑 %F{cyan}${_prompt_custom_pwd}%f ${vcs_info_msg_0_}%F{yellow}$%f '
+  PROMPT='🦑 %F{cyan}${_prompt_custom_pwd}%f ${vcs_info_msg_0_}%F{yellow}→%f '
   # PROMPT='%F{red}💎%f %F{cyan}${_prompt_custom_pwd}%f %F{yellow}→%f ${vcs_info_msg_0_}'
   RPROMPT=''
 }
