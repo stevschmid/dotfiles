@@ -1,80 +1,74 @@
 " vim: filetype=vim
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+call plug#begin('~/.vim/plugged')
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" set nocompatible              " be iMproved, required
+" filetype off                  " required
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" Let the plugins begin!
-Plugin 'L9' " Some fancy helpers
+" " set the runtime path to include Vundle and initialize
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
 
 " HELPFUL TOOLS
-Plugin 'tpope/vim-fugitive' " Gblame all day every day
-Plugin 'tpope/vim-surround' " Brackets for the masses
-Plugin 'tpope/vim-dispatch' " Building with tmux as easy as baking olive bread
-Plugin 'tpope/vim-repeat' " Plugins dig the dot
-Plugin 'tpope/vim-unimpaired' " Helpful mappings
-Plugin 'tpope/vim-commentary' " Comment dat baby out
-Plugin 'simnalamburt/vim-mundo' " I don't use it much, but Nilsi swears on it!
-Plugin 'jremmen/vim-ripgrep' " RIP ag
-Plugin 'ervandew/supertab' " Autocompletion tab
+Plug 'tpope/vim-fugitive' " Gblame all day every day
+Plug 'tpope/vim-surround' " Brackets for the masses
+Plug 'tpope/vim-dispatch' " Building with tmux as easy as baking olive bread
+Plug 'tpope/vim-repeat' " Plugs dig the dot
+Plug 'tpope/vim-unimpaired' " Helpful mappings
+Plug 'tpope/vim-commentary' " Comment dat baby out
+Plug 'simnalamburt/vim-mundo' " I don't use it much, but Nilsi swears on it!
+Plug 'jremmen/vim-ripgrep' " RIP ag
+Plug 'ervandew/supertab' " Autocompletion tab
 
-" Plugin 'ludovicchabant/vim-gutentags' " ctag management
-" Plugin 'majutsushi/tagbar' " Tabgar for swaggy overview
+" Plug 'ludovicchabant/vim-gutentags' " ctag management
+" Plug 'majutsushi/tagbar' " Tabgar for swaggy overview
 
 " NAVIGATION
-Plugin 'godlygeek/tabular' " Align ALL THE THINGS!
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
-Plugin 'christoomey/vim-tmux-navigator' " Tmux and Vim, the dream team
-Plugin 'scrooloose/nerdtree'
-" Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'octref/RootIgnore'
-Plugin 'tpope/vim-vinegar' " Split windows and the project drawer go together like oil and vinegar. 
+Plug 'godlygeek/tabular' " Align ALL THE THINGS!
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'christoomey/vim-tmux-navigator' " Tmux and Vim, the dream team
+Plug 'scrooloose/nerdtree'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'octref/RootIgnore'
+Plug 'tpope/vim-vinegar' " Split windows and the project drawer go together like oil and vinegar. 
 
-Plugin 'justinmk/vim-sneak'
+Plug 'justinmk/vim-sneak'
 let g:sneak#label = 1 " Try label-mode for a minimalist alternative to EasyMotion:
 
 " AUTOMAGIC
-Plugin 'tpope/vim-endwise' " Put the end for me, please, I cannot bear the thought of actually writing 3 letters
+Plug 'tpope/vim-endwise' " Put the end for me, please, I cannot bear the thought of actually writing 3 letters
 
 " DISPLAY
-Plugin 'airblade/vim-gitgutter' " Sexy git diffs you say?
+Plug 'airblade/vim-gitgutter' " Sexy git diffs you say?
 set updatetime=100
 
-Plugin 'morhetz/gruvbox.git'
+Plug 'morhetz/gruvbox'
 
 " FILE FORMAT SUPPORT
-Plugin 'sheerun/vim-polyglot' " A solid language pack for Vim.
-" Plugin 'netdata/vim-puppet' " Automatic poeppet alignment, count me in!
-" Plugin 'kchmck/vim-coffee-script' " Gimme dat coffeescript support plox
-" Plugin 'octol/vim-cpp-enhanced-highlight' " Enhanced C++ support
-" Plugin 'plasticboy/vim-markdown'
-" Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rails'
-" Plugin 'pangloss/vim-javascript' " required for vim-jsx
-" Plugin 'mxw/vim-jsx'
-" Plugin 'elixir-lang/vim-elixir'
-" Plugin 'Vimjas/vim-python-pep8-indent'
-" Plugin 'rhysd/vim-clang-format'
-" Plugin 'kana/vim-operator-user' " ={ to indent whole block, easy boys
-Plugin 'slim-template/vim-slim'
-" Plugin 'w0rp/ale' ' Crashing Culprit?
+Plug 'sheerun/vim-polyglot' " A solid language pack for Vim.
+" Plug 'netdata/vim-puppet' " Automatic poeppet alignment, count me in!
+" Plug 'kchmck/vim-coffee-script' " Gimme dat coffeescript support plox
+" Plug 'octol/vim-cpp-enhanced-highlight' " Enhanced C++ support
+" Plug 'plasticboy/vim-markdown'
+" Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+" Plug 'pangloss/vim-javascript' " required for vim-jsx
+" Plug 'mxw/vim-jsx'
+" Plug 'elixir-lang/vim-elixir'
+" Plug 'Vimjas/vim-python-pep8-indent'
+" Plug 'rhysd/vim-clang-format'
+" Plug 'kana/vim-operator-user' " ={ to indent whole block, easy boys
+Plug 'slim-template/vim-slim'
+" Plug 'w0rp/ale' ' Crashing Culprit?
 
 " SCIENCE
-" Plugin 'jalvesaq/R-Vim-runtime'
-" Plugin 'jcfaria/Vim-R-plugin'
+" Plug 'jalvesaq/R-Vim-runtime'
+" Plug 'jcfaria/Vim-R-plugin'
 " let vimrplugin_vsplit = 1 " vertical split
 " let vimrplugin_assign = 2 " turn double _ into <-
-" Plugin 'ervandew/screen' " needed for VimLab
-" Plugin 'dajero/VimLab'
-" Plugin 'ivanov/vim-ipython'
+" Plug 'ervandew/screen' " needed for VimLab
+" Plug 'dajero/VimLab'
+" Plug 'ivanov/vim-ipython'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
