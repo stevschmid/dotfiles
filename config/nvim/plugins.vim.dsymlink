@@ -19,6 +19,7 @@ Plug 'tpope/vim-commentary' " Comment dat baby out
 Plug 'simnalamburt/vim-mundo' " I don't use it much, but Nilsi swears on it!
 Plug 'jremmen/vim-ripgrep' " RIP ag
 Plug 'ervandew/supertab' " Autocompletion tab
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Plug 'ludovicchabant/vim-gutentags' " ctag management
 " Plug 'majutsushi/tagbar' " Tabgar for swaggy overview
