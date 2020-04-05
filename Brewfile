@@ -49,6 +49,7 @@ brew 'yarn'
 brew 'gpg'
 brew 's3cmd'
 brew 'python'
+brew 'hub'
 
 # services
 brew 'postgresql@10', restart_service: :changed, start_service: true
