@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
 
 " HELPFUL TOOLS
 Plug 'tpope/vim-fugitive' " Gblame all day every day
+Plug 'tpope/vim-rhubarb' " Enables :Gbrowse from fugitive.vim to open GitHub URLs
 Plug 'tpope/vim-surround' " Brackets for the masses
 Plug 'tpope/vim-dispatch' " Building with tmux as easy as baking olive bread
 Plug 'tpope/vim-repeat' " Plugs dig the dot
