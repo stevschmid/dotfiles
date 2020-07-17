@@ -1,6 +1,6 @@
-library(vimcom)
-library(colorout)
-library(setwidth)
+# library(vimcom)
+# library(colorout)
+# library(setwidth)
 
 # Mirror
 options(repos=structure(c(CRAN="http://stat.ethz.ch/CRAN/")))

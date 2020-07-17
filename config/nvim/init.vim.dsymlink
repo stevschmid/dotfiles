@@ -157,6 +157,8 @@ let $FZF_DEFAULT_COMMAND = 'rg --files'
 " crontab on mac
 autocmd filetype crontab setlocal nobackup nowritebackup
 
+let g:vim_json_syntax_conceal = 0
+
 " Transparent bg
 hi Normal guibg=NONE ctermbg=NONE
 
