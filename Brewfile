@@ -24,7 +24,7 @@ cask 'font-input'
 cask 'amethyst' # tiling manager
 cask 'github'
 cask 'flux'
-cask 'alacritty'
+cask 'postgres'
 
 # app store
 mas 'PDFScanner', id: 410968114
@@ -52,7 +52,9 @@ brew 'python'
 brew 'hub'
 
 # services
-brew 'postgresql@10', restart_service: :changed, start_service: true
+# brew postgres does not properly shutdown (e.g. after restoring dump), corruption, long db startups etc.
+# let's try the app
+# brew 'postgresql@10', restart_service: :changed, start_service: true
 brew 'dnsmasq', restart_service: :changed, start_service: true
 brew 'rabbitmq', restart_service: :changed, start_service: true
 brew 'nginx', restart_service: :changed, start_service: true
