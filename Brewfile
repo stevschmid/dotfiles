@@ -1,8 +1,8 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/services'
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
+tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
 brew 'mas'
 
 # neovim
@@ -16,7 +16,7 @@ cask 'google-chrome'
 cask 'firefox'
 cask 'slack'
 # cask 'smoothmouse' # we had helluva time buddy ;_;
-cask 'virtualbox'
+# cask 'virtualbox'
 cask 'steam'
 cask 'spotify'
 cask 'vlc'
@@ -25,6 +25,7 @@ cask 'amethyst' # tiling manager
 cask 'github'
 cask 'flux'
 cask 'alacritty'
+cask 'sourcetree'
 
 # app store
 mas 'PDFScanner', id: 410968114
@@ -44,7 +45,6 @@ brew 'ripgrep'
 brew 'ag' # ff
 brew 'clang-format'
 brew 'rename'
-brew 'rust'
 brew 'yarn'
 brew 'gpg'
 brew 's3cmd'
@@ -52,7 +52,7 @@ brew 'python'
 brew 'hub'
 
 # services
-brew 'postgresql@10', restart_service: :changed, start_service: true
+# brew 'postgresql@10', restart_service: :changed, start_service: true
 brew 'dnsmasq', restart_service: :changed, start_service: true
 brew 'rabbitmq', restart_service: :changed, start_service: true
 brew 'nginx', restart_service: :changed, start_service: true

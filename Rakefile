@@ -44,7 +44,7 @@ namespace :bootstrap do
   desc 'Bootstrap vim'
   task :vim do
     sh "curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
-    sh "nvim -c ':BundleInstall'"
+    sh "nvim -c ':PlugInstall'"
   end
 
   desc 'Bootstrap zsh'
@@ -67,7 +67,9 @@ namespace :bootstrap do
     # so iTerm2 loads zshrc before tmux
     # zshrc sets $TERM
     # ($TERM outside of tmux should be *256colors)
-    sh 'chsh -s /bin/zsh'
+    # sh 'chsh -s /bin/zsh'
+    # which homebrew m1 compat this would be /opt/homebrew
+    # still needed?
 
     # fix compdump/slow zsh loading on macOS sierra
     # sh 'compaudit | xargs chmod g-w'

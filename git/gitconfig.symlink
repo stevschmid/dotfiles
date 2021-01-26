@@ -6,7 +6,7 @@
 default = simple
 
 [core]
-excludesfile = /Users/spidy/.dotfiles/git/gitignore
+	excludesfile = /Users/spidy/.dotfiles/git/gitignore
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
@@ -18,3 +18,5 @@ excludesfile = /Users/spidy/.dotfiles/git/gitignore
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[commit]
+	template = /Users/spidy/.stCommitMsg
