@@ -50,9 +50,10 @@ brew 'gpg'
 brew 's3cmd'
 brew 'python'
 brew 'hub'
+brew 'graphicsmagick'
 
 # services
-# brew 'postgresql@10', restart_service: :changed, start_service: true
+brew 'postgresql@10', restart_service: :changed, start_service: true
 brew 'dnsmasq', restart_service: :changed, start_service: true
 brew 'rabbitmq', restart_service: :changed, start_service: true
 brew 'nginx', restart_service: :changed, start_service: true

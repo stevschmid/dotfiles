@@ -50,3 +50,8 @@ if [ "$TMUX" = "" ]; then tmux attach; fi
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 
+# rbenv 
+# DO NOT USE $(brew --prefix openssl@1.1) HERE!
+# slows down zsh startup time immensely
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@1.1"
+export GEM_HOME="$HOME/.gem"

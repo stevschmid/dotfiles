@@ -5,7 +5,7 @@ alias history='history 1'
 alias fh='history | grep'
 
 # ruby and development
-alias rc='rails console'
+alias rc='bundle exec rails console'
 alias b='bundle'
 alias sam='bundle install; yarn install; foreman start'
 
