@@ -31,8 +31,3 @@ It's important that the $TERM outside is set to the same $TERM inside (plus 256c
 Check if True color is enabled inside tmux via
 
 `tmux info | grep Tc`
-
-## Apple Silicon
-
-Open a new tmux pane, and check in activity editor if all `zsh` instances are run as Apple silicon.
-

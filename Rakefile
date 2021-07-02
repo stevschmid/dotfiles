@@ -63,10 +63,6 @@ namespace :bootstrap do
     # fzf
     sh '/usr/local/opt/fzf/install'
 
-    # make sure zsh is linked to apple silicon zsh
-    # change default shell to homebrew (otherwise /bin/zsh is used for new panes opened by tmux, which is x64 zsh shipped by apple)
-    sh 'sudo dscl . -create /Users/$USER UserShell /opt/homebrew/bin/zsh'
-
     # change default shell
     # so iTerm2 loads zshrc before tmux
     # zshrc sets $TERM
