@@ -19,6 +19,9 @@ syntax enable
 " Shell
 set shell=bash
 
+" Cursorline
+" set cursorline
+
 " Allow backgrounding buffers without writing them, and remember marks/undo
 " for backgrounded buffers
 set hidden

@@ -12,8 +12,9 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Disable mouse acceleration
-defaults write .GlobalPreferences com.apple.mouse.scaling -1
+# Disable press and hold
+# Otherwise switching ebtween h and j will cause the latter key to stop repeating in vim
+defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Disable smart quotes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false

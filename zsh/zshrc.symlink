@@ -30,9 +30,6 @@ alias rm='nocorrect rm'
 # F Z F
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# rbenv
-eval "$(rbenv init -)"
-
 # yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
@@ -49,6 +46,9 @@ if [ "$TMUX" = "" ]; then tmux attach; fi
 [[ -f /Users/spidy/projects/hakuna/reg-suit/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/spidy/projects/hakuna/reg-suit/node_modules/tabtab/.completions/serverless.zsh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
+
+# rbenv
+eval "$(rbenv init -)"
 
 # rbenv 
 # DO NOT USE $(brew --prefix openssl@1.1) HERE!

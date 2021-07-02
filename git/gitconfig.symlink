@@ -20,3 +20,5 @@ default = simple
 	trustExitCode = true
 [commit]
 	template = /Users/spidy/.stCommitMsg
+[alias]
+	up = pull --rebase --autostash

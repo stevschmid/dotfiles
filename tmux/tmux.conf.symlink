@@ -47,7 +47,8 @@ setw -g window-status-current-format "(#I)#{b:pane_current_path}#F"
 setw -g window-status-current-style fg=yellow,bg=black,bold
 
 # Info on right
-set -g status-right "#(/usr/bin/battery -t) #[fg=magenta]#(sysctl -n vm.loadavg | cut -d \" \" -f 2-4) #[fg=white]| #[fg=yellow]Tmux:#S #[fg=white]| #[fg=green]%Y-%m-%d #[fg=white]| #[fg=cyan]%A %H:%M"
+# set -g status-right "#(/usr/bin/battery -t) #[fg=magenta]#(sysctl -n vm.loadavg | cut -d \" \" -f 2-4) #[fg=white]| #[fg=yellow]Tmux:#S #[fg=white]| #[fg=green]%Y-%m-%d #[fg=white]| #[fg=cyan]%A %H:%M"
+set -g status-right "#[fg=yellow]Tmux:#S #[fg=white]| #[fg=green]%Y-%m-%d #[fg=white]| #[fg=cyan]%A %H:%M | #{weather} | #{cpu_fg_color}CPU #{cpu_percentage}"
 set -g status-right-length 80
 
 # Info on left (no session display)
@@ -124,3 +125,13 @@ set-window-option -g window-active-style 'bg=black'
 
 # if run as "tmux attach", create a session if one does not already exist
 new-session -n $HOST
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+set -g @plugin 'xamut/tmux-weather'
+set -g @plugin 'tmux-plugins/tmux-cpu'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'

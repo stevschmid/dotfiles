@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require 'net/http'
+require 'json'
+require 'date'
+
+resp = Net::HTTP.get('wttr.in', "/#{ARGV[0]}?format=j1")
+json = JSON.parse(resp, symbolize_names: true)
+
+def celsius(num)
+  prefix = num.to_i > 0 ? '+' : ''
+
+  "#{prefix}#{num}°C"
+end
+
+puts "Today: #{json[:current_condition].first[:weatherDesc].first[:value]} #{celsius(json[:current_condition].first[:temp_C])} (#{celsius(json[:weather].first[:maxtempC])}/#{celsius(json[:weather].first[:mintempC])})"
+
+json[:weather][1..-1].each do |weather|
+  puts "#{Date.parse(weather[:date]).strftime('%A')}: #{celsius(weather[:maxtempC])}/#{celsius(weather[:mintempC])}"
+end
