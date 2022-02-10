@@ -44,9 +44,6 @@ xnoremap p pgvy
 :command W w
 :command Q q
 
-" increment using ctrl+i (ctrl+a is used by tmux)
-:nnoremap <C-i> <C-a>
-
 " tab, shift+tab to cycle through buffers
 " :nnoremap <Tab> :bnext<CR>
 " :nnoremap <S-Tab> :bprevious<CR>

@@ -54,4 +54,6 @@ eval "$(rbenv init -)"
 # DO NOT USE $(brew --prefix openssl@1.1) HERE!
 # slows down zsh startup time immensely
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@1.1"
-export GEM_HOME="$HOME/.gem"
+# export GEM_HOME="$HOME/.gem"
+
+export HOMEBREW_NO_ANALYTICS=1

@@ -162,4 +162,3 @@ autocmd filetype crontab setlocal nobackup nowritebackup
 
 " Transparent bg
 hi Normal guibg=NONE ctermbg=NONE
-
