@@ -4,10 +4,18 @@
 source ~/.config/nvim/plugins.vim
 
 " My beloved colorscheme
-set termguicolors
+" Important!!
+if has('termguicolors')
+  set termguicolors
+endif
+
 set background=dark
-let g:gruvbox_contrast_dark='hard'
-colorscheme gruvbox
+" Set contrast.
+" This configuration option should be placed before `colorscheme gruvbox-material`.
+" Available values: 'hard', 'medium'(default), 'soft'
+let g:gruvbox_material_background = 'hard'
+" let g:gruvbox_material_palette = 'original'
+colorscheme gruvbox-material
 
 " Load mappings
 source ~/.config/nvim/mappings.vim
@@ -20,7 +28,8 @@ syntax enable
 set shell=bash
 
 " Cursorline
-" set cursorline
+set cursorline
+" set relativenumber
 
 " Allow backgrounding buffers without writing them, and remember marks/undo
 " for backgrounded buffers
@@ -119,16 +128,6 @@ let g:gitgutter_sign_removed = '--'
 let g:gitgutter_sign_removed_first_line = '^^'
 let g:gitgutter_sign_modified_removed = '~_'
 
-" syntastic
-let g:syntastic_error_symbol='X'
-let g:syntastic_warning_symbol='!'
-
-" ag.vim
-let g:ag_working_path_mode="r" " You can configure ag.vim to always start searching from your project root instead of the cwd
-
-" vim-jsx
-let g:jsx_ext_required = 0
-
 " fix slow loading of ftplugin/ruby.vim
 let g:ruby_path = system('rbenv prefix')
 
@@ -153,12 +152,5 @@ autocmd FileType c,cpp,objc map <buffer> = <Plug>(operator-clang-format)
 " FZF
 let $FZF_DEFAULT_COMMAND = 'rg --files'
 
-" gimme dat hardmode fam
-" autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-" nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
-"
-" crontab on mac
-autocmd filetype crontab setlocal nobackup nowritebackup
-
 " Transparent bg
-hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE

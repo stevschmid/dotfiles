@@ -45,9 +45,8 @@ xnoremap p pgvy
 :command Q q
 
 " tab, shift+tab to cycle through buffers
-" :nnoremap <Tab> :bnext<CR>
-" :nnoremap <S-Tab> :bprevious<CR>
-"
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>
 
 nmap <leader>dm :let g:gitgutter_diff_base = 'master'<CR>:e<CR>
 nmap <leader>db :let g:gitgutter_diff_base = 'head'<CR>:e<CR>

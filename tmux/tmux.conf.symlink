@@ -119,8 +119,8 @@ bind-key -T copy-mode-vi PPage send-keys -X page-up
 bind-key -T copy-mode-vi NPage send-keys -X page-down
 
 # These options allow you do have different styles for active and non-active panes.
-set-window-option -g window-style 'bg=#080808'
-set-window-option -g window-active-style 'bg=black'
+# set-window-option -g window-style 'bg=#080808'
+# set-window-option -g window-active-style 'bg=black'
 
 # if run as "tmux attach", create a session if one does not already exist
 new-session -n $HOST
