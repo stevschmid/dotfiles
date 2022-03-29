@@ -403,3 +403,5 @@ key_bindings:
   - { key: NumpadEnter,             chars: "\n"                          }
   - { key: Key6,        mods: Control, chars: "\x1e"                     }
   - { key: Return,   mods: Command, action: ToggleFullscreen             } 
+  - { key: LBracket,    mods: Alt, chars: "\x1b["                        } # Alt + [
+  - { key: RBracket,    mods: Alt, chars: "\x1b]"                        } # Alt + ]

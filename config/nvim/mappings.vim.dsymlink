@@ -8,6 +8,8 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
+nnoremap <M-A> :echoe "SWAG"<CR>
+
 " gundo.vim
 nnoremap <leader>g :GundoToggle<CR>
 
@@ -45,8 +47,8 @@ xnoremap p pgvy
 :command Q q
 
 " tab, shift+tab to cycle through buffers
-:nnoremap <Tab> :bnext<CR>
-:nnoremap <S-Tab> :bprevious<CR>
+" :nnoremap <Tab> :bnext<CR> " -> CONFLICT WITH Ctrl+I (tab/ctrl+i jump forward)
+" :nnoremap <S-Tab> :bprevious<CR>
 
 nmap <leader>dm :let g:gitgutter_diff_base = 'master'<CR>:e<CR>
 nmap <leader>db :let g:gitgutter_diff_base = 'head'<CR>:e<CR>

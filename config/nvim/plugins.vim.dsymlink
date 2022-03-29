@@ -27,10 +27,13 @@ Plug 'tpope/vim-vinegar' " Split windows and the project drawer go together like
 
 " AUTOMAGIC
 Plug 'tpope/vim-endwise' " Put the end for me, please, I cannot bear the thought of actually writing 3 letters
+Plug 'github/copilot.vim'
 
 " DISPLAY
 Plug 'airblade/vim-gitgutter' " Sexy git diffs you say?
 set updatetime=100
+
+" Plug 'lukas-reineke/indent-blankline.nvim' " Need some guidance please
 
 Plug 'sainnhe/gruvbox-material' " better highlight colors
 

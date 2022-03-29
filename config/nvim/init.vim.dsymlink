@@ -28,7 +28,7 @@ syntax enable
 set shell=bash
 
 " Cursorline
-set cursorline
+set nocursorline
 " set relativenumber
 
 " Allow backgrounding buffers without writing them, and remember marks/undo
@@ -38,7 +38,6 @@ set hidden
 " Disable folding by default
 set nofoldenable
 
-set nohlsearch
 set incsearch
 
 " Whitespace
