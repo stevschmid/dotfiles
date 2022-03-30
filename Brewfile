@@ -21,7 +21,8 @@ cask 'steam'
 cask 'spotify'
 cask 'vlc'
 cask 'font-input'
-cask 'amethyst' # tiling manager
+cask 'font-fantasque-sans-mono'
+# cask 'amethyst' # tiling manager
 cask 'github'
 cask 'flux'
 cask 'alacritty'
@@ -58,3 +59,8 @@ brew 'dnsmasq', restart_service: :changed, start_service: true
 brew 'rabbitmq', restart_service: :changed, start_service: true
 brew 'nginx', restart_service: :changed, start_service: true
 brew 'redis', restart_service: :changed, start_service: true
+
+# yabai / skhd (untested brewfile additions)
+brew 'koekeishiya/formulae/yabai', restart_service: :changed, start_service: true
+brew 'koekeishiya/formulae/skhd', restart_service: :changed, start_service: true
+

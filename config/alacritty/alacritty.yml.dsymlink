@@ -31,6 +31,9 @@ window:
   # Setting this to false will result in window without borders and title bar.
   decorations: full
 
+  # Background opacity
+  opacity: 0.95
+
 # Display tabs using this many cells (changes require restart)
 tabspaces: 8
 

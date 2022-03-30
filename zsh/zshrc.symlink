@@ -27,6 +27,9 @@ alias ln='nocorrect ln'
 alias mv='nocorrect mv'
 alias rm='nocorrect rm'
 
+# load tmux
+# alias devenv='pushd ~/projects && tmux attach && popd'
+
 # F Z F
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -38,7 +41,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 
-# start tmux
+# auto-start tmux
 if [ "$TMUX" = "" ]; then tmux attach; fi
 
 # tabtab source for serverless package

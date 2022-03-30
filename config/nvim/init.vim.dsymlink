@@ -14,8 +14,11 @@ set background=dark
 " This configuration option should be placed before `colorscheme gruvbox-material`.
 " Available values: 'hard', 'medium'(default), 'soft'
 let g:gruvbox_material_background = 'hard'
-" let g:gruvbox_material_palette = 'original'
+let g:gruvbox_material_transparent_background=1
 colorscheme gruvbox-material
+
+" Transparent bg
+hi Normal ctermbg=NONE guibg=NONE
 
 " Load mappings
 source ~/.config/nvim/mappings.vim
@@ -151,5 +154,3 @@ autocmd FileType c,cpp,objc map <buffer> = <Plug>(operator-clang-format)
 " FZF
 let $FZF_DEFAULT_COMMAND = 'rg --files'
 
-" Transparent bg
-" hi Normal guibg=NONE ctermbg=NONE

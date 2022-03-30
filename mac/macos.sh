@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # ~/.macos — https://mths.be/macos
+echo "Make sure that this console has full disk access (security & privacy preferences)"
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -149,3 +150,6 @@ defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+# Custom Addition: "Reduce Motion" (system settings > accessibility > display)
+defaults write com.apple.universalaccess reduceMotion -bool true
