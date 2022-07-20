@@ -4,7 +4,7 @@ require 'net/http'
 require 'json'
 require 'date'
 
-resp = Net::HTTP.get('wttr.in', "/#{ARGV[0]}?format=j1")
+resp = Net::HTTP.get(URI("https://wttr.in/#{ARGV[0]}?format=j1"))
 json = JSON.parse(resp, symbolize_names: true)
 
 def celsius(num)
