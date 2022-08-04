@@ -150,6 +150,3 @@ defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
-
-# Custom Addition: "Reduce Motion" (system settings > accessibility > display)
-defaults write com.apple.universalaccess reduceMotion -bool true
