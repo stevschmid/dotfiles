@@ -52,3 +52,10 @@ xnoremap p pgvy
 
 nmap <leader>dm :let g:gitgutter_diff_base = 'master'<CR>:e<CR>
 nmap <leader>db :let g:gitgutter_diff_base = 'head'<CR>:e<CR>
+
+" vim-test
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>

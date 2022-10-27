@@ -5,6 +5,8 @@ function ag {
   echo "riPepperonis. Use rg instead";
 }
 
+alias v="nvim"
+
 function weather {
   curl "wttr.in/$1"
 }
