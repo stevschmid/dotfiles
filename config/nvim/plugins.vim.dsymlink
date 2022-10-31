@@ -38,6 +38,7 @@ set updatetime=100
 " Plug 'lukas-reineke/indent-blankline.nvim' " Need some guidance please
 
 Plug 'sainnhe/gruvbox-material' " better highlight colors
+Plug 'sainnhe/everforest'
 
 " FILE FORMAT SUPPORT
 Plug 'sheerun/vim-polyglot' " A solid language pack for Vim.
