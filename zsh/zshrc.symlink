@@ -3,7 +3,6 @@ zmodload zsh/zprof
 source ~/.zprezto/init.zsh
 
 # uname -a
-export TERM='screen-256color'
 export DOTFILES=$HOME/.dotfiles
 
 # DOTFILES STUFF

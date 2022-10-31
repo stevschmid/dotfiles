@@ -3,6 +3,8 @@ cask_args appdir: '/Applications'
 tap 'homebrew/services'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
+tap 'wez/wezterm'
+
 brew 'mas'
 
 # neovim
@@ -15,17 +17,8 @@ brew 'universal-ctags', args: ['HEAD']
 cask 'google-chrome'
 cask 'firefox'
 cask 'slack'
-# cask 'smoothmouse' # we had helluva time buddy ;_;
-# cask 'virtualbox'
-cask 'steam'
-cask 'spotify'
 cask 'vlc'
 cask 'font-input'
-cask 'font-fantasque-sans-mono'
-# cask 'amethyst' # tiling manager
-cask 'github'
-cask 'flux'
-cask 'alacritty'
 cask 'sourcetree'
 
 # app store

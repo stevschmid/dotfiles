@@ -23,11 +23,3 @@ awk 'BEGIN{
     printf "\n";
 }'
 ```
-
-Otherwise check this troubleshooting issue: https://github.com/tmux/tmux/issues/696
-
-It's important that the $TERM outside is set to the same $TERM inside (plus 256c support).
-
-Check if True color is enabled inside tmux via
-
-`tmux info | grep Tc`

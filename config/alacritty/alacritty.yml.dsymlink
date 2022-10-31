@@ -11,7 +11,7 @@ env:
   # Note that some xterm terminfo databases don't declare support for italics.
   # You can verify this by checking for the presence of `smso` and `sitm` in
   # `infocmp xterm-256color`.
-  TERM: screen-256color
+  TERM: alacritty
 
 window:
   # Window dimensions in character columns and lines
@@ -32,13 +32,10 @@ window:
   decorations: full
 
   # Background opacity
-  opacity: 0.95
+  # opacity: 0.95
 
 # Display tabs using this many cells (changes require restart)
 tabspaces: 8
-
-# When true, bold text is drawn using the bright variant of colors.
-draw_bold_text_with_bright_colors: true
 
 # Font configuration (changes require restart)
 font:
@@ -56,9 +53,9 @@ font:
 
   # The italic font face
   italic:
-    family: 'Input Mono'
+    family: 'Operator Mono'
     # Style can be specified to pick a specific face.
-    style: Italic
+    style: Light Italic
 
   # Point size of the font
   size: 16.0
@@ -74,98 +71,146 @@ font:
     x: 0
     y: 0
 
-  # OS X only: use thin stroke font rendering. Thin strokes are suitable
-  # for retina displays, but for non-retina you probably want this set to
-  # false.
-  use_thin_strokes: true
-
 # Should display the render timer
 debug:
   render_timer: false
 
-# Colors (Gruvbox dark)
-#colors:
-#  # Default colors
-#  primary:
-#    # hard contrast: background = '0x1d2021'
-#    background: '0x1d2021'
-#    # soft contrast: background = '0x32302f'
-#    foreground: '0xebdbb2'
-#
-#  # Normal colors
-#  normal:
-#    black:   '0x1d2021'
-#    red:     '0xcc241d'
-#    green:   '0x98971a'
-#    yellow:  '0xd79921'
-#    blue:    '0x458588'
-#    magenta: '0xb16286'
-#    cyan:    '0x689d6a'
-#    white:   '0xa89984'
-#
-#  # Bright colors
-#  bright:
-#    black:   '0x928374'
-#    red:     '0xfb4934'
-#    green:   '0xb8bb26'
-#    yellow:  '0xfabd2f'
-#    blue:    '0x83a598'
-#    magenta: '0xd3869b'
-#    cyan:    '0x8ec07c'
-#    white:   '0xebdbb2'
+schemes:
+  gruvbox_material_hard_dark: &gruvbox_material_hard_dark
+    primary:
+      background: '0x1d2021'
+      foreground: '0xd4be98'
+    normal:
+      black:   '0x32302f'
+      red:     '0xea6962'
+      green:   '0xa9b665'
+      yellow:  '0xd8a657'
+      blue:    '0x7daea3'
+      magenta: '0xd3869b'
+      cyan:    '0x89b482'
+      white:   '0xd4be98'
+    bright:
+      black:   '0x32302f'
+      red:     '0xea6962'
+      green:   '0xa9b665'
+      yellow:  '0xd8a657'
+      blue:    '0x7daea3'
+      magenta: '0xd3869b'
+      cyan:    '0x89b482'
+      white:   '0xd4be98'
+  gruvbox_material_medium_dark: &gruvbox_material_medium_dark
+    primary:
+      background: '0x282828'
+      foreground: '0xd4be98'
+    normal:
+      black:   '0x3c3836'
+      red:     '0xea6962'
+      green:   '0xa9b665'
+      yellow:  '0xd8a657'
+      blue:    '0x7daea3'
+      magenta: '0xd3869b'
+      cyan:    '0x89b482'
+      white:   '0xd4be98'
+    bright:
+      black:   '0x3c3836'
+      red:     '0xea6962'
+      green:   '0xa9b665'
+      yellow:  '0xd8a657'
+      blue:    '0x7daea3'
+      magenta: '0xd3869b'
+      cyan:    '0x89b482'
+      white:   '0xd4be98'
+  gruvbox_material_soft_dark: &gruvbox_material_soft_dark
+    primary:
+      background: '0x32302f'
+      foreground: '0xd4be98'
+    normal:
+      black:   '0x45403d'
+      red:     '0xea6962'
+      green:   '0xa9b665'
+      yellow:  '0xd8a657'
+      blue:    '0x7daea3'
+      magenta: '0xd3869b'
+      cyan:    '0x89b482'
+      white:   '0xd4be98'
+    bright:
+      black:   '0x45403d'
+      red:     '0xea6962'
+      green:   '0xa9b665'
+      yellow:  '0xd8a657'
+      blue:    '0x7daea3'
+      magenta: '0xd3869b'
+      cyan:    '0x89b482'
+      white:   '0xd4be98'
+  gruvbox_material_hard_light: &gruvbox_material_hard_light
+    primary:
+      background: '0xf9f5d7'
+      foreground: '0x654735'
+    normal:
+      black:   '0x654735'
+      red:     '0xc14a4a'
+      green:   '0x6c782e'
+      yellow:  '0xb47109'
+      blue:    '0x45707a'
+      magenta: '0x945e80'
+      cyan:    '0x4c7a5d'
+      white:   '0xf2e5bc'
+    bright:
+      black:   '0x654735'
+      red:     '0xc14a4a'
+      green:   '0x6c782e'
+      yellow:  '0xb47109'
+      blue:    '0x45707a'
+      magenta: '0x945e80'
+      cyan:    '0x4c7a5d'
+      white:   '0xf2e5bc'
+  gruvbox_material_medium_light: &gruvbox_material_medium_light
+    primary:
+      background: '0xfbf1c7'
+      foreground: '0x654735'
+    normal:
+      black:   '0x654735'
+      red:     '0xc14a4a'
+      green:   '0x6c782e'
+      yellow:  '0xb47109'
+      blue:    '0x45707a'
+      magenta: '0x945e80'
+      cyan:    '0x4c7a5d'
+      white:   '0xeee0b7'
+    bright:
+      black:   '0x654735'
+      red:     '0xc14a4a'
+      green:   '0x6c782e'
+      yellow:  '0xb47109'
+      blue:    '0x45707a'
+      magenta: '0x945e80'
+      cyan:    '0x4c7a5d'
+      white:   '0xeee0b7'
+  gruvbox_material_soft_light: &gruvbox_material_soft_light
+    primary:
+      background: '0xf2e5bc'
+      foreground: '0x654735'
+    normal:
+      black:   '0x654735'
+      red:     '0xc14a4a'
+      green:   '0x6c782e'
+      yellow:  '0xb47109'
+      blue:    '0x45707a'
+      magenta: '0x945e80'
+      cyan:    '0x4c7a5d'
+      white:   '0xe6d5ae'
+    bright:
+      black:   '0x654735'
+      red:     '0xc14a4a'
+      green:   '0x6c782e'
+      yellow:  '0xb47109'
+      blue:    '0x45707a'
+      magenta: '0x945e80'
+      cyan:    '0x4c7a5d'
+      white:   '0xe6d5ae'
 
-# Colors (gruvbox material hard dark)
-# https://gist.github.com/sainnhe/ad5cbc4f05c4ced83f80e54d9a75d22f
-colors:
-  primary:
-    background: '0x1d2021'
-    foreground: '0xd4be98'
-  normal:
-    black:   '0x32302f'
-    red:     '0xea6962'
-    green:   '0xa9b665'
-    yellow:  '0xd8a657'
-    blue:    '0x7daea3'
-    magenta: '0xd3869b'
-    cyan:    '0x89b482'
-    white:   '0xd4be98'
-  bright:
-    black:   '0x32302f'
-    red:     '0xea6962'
-    green:   '0xa9b665'
-    yellow:  '0xd8a657'
-    blue:    '0x7daea3'
-    magenta: '0xd3869b'
-    cyan:    '0x89b482'
-    white:   '0xd4be98'
-
-# GRUVBOX MATERIAL HARD DARK MIX
-# https://gist.github.com/sainnhe/ad5cbc4f05c4ced83f80e54d9a75d22f for primary fg/bg
-# Digital Color Metered a 'mix' gruvbox material in vim, then searched github for a alacritty config using it
-# https://github.com/minnewanka/dotfiles/blob/308f43fc7fb9cc77cb4f17ad242585af666390f7/alacritty/alacritty.yml#L180
-# colors:
-#   primary:
-#     background: '0x1d2021'
-#     foreground: '0xd4be98'
-#   normal:
-#     black:   '0x45403d'
-#     red:     '0xf2594b'
-#     green:   '0xb0b846'
-#     yellow:  '0xe9b143'
-#     blue:    '0x80aa9e'
-#     magenta: '0xd3869b'
-#     pink:    '0xd3869b'
-#     cyan:    '0x8bba7f'
-#     white:   '0xd4be98'
-#   bright:
-#     black:   '0x45403d'
-#     red:     '0xea6962'
-#     green:   '0xa9b665'
-#     yellow:  '0xd8a657'
-#     blue:    '0x7daea3'
-#     magenta: '0xd3869b'
-#     cyan:    '0x89b482'
-#     white:   '0xd4be98'
+# Apply the color scheme.
+colors: *gruvbox_material_medium_dark
 
 # Visual Bell
 #
