@@ -1,0 +1,28 @@
+-- vim: filetype=lua
+local opts = { noremap = true, silent = true }
+local keymap = vim.keymap.set
+
+-- fzf.vim
+keymap('n', '<C-p>', ':Files<CR>', opts)
+keymap('n', '<Leader>b', ':Buffers<CR>', opts)
+
+keymap('n', '<C-n>', ':NvimTreeFindFileToggle<CR>', opts)
+keymap('n', '<Leader>t', ':TestNearest<CR>', opts)
+keymap('n', '<Leader>T', ':TestFile<CR>', opts)
+keymap('n', '<Leader>l', ':TestLast<CR>', opts)
+keymap('n', '<Leader>g', ':TestVisit<CR>', opts)
+
+keymap('n', '<Leader>q', ':Bdelete<CR>', opts) -- bbye buffer delete (keep layout)
+
+keymap('n', '<F5>', ':MundoToggle<CR>', opts)
+keymap('n', '<F6>', ':TagbarToggle<CR>', opts)
+
+-- fix mistyping
+vim.cmd(':command WQ wq')
+vim.cmd(':command Wq wq')
+vim.cmd(':command W w')
+vim.cmd(':command Q q')
+
+-- gitsigns change base
+keymap('n', '<Leader>dm', ':Gitsigns change_base master<CR>', opts)
+keymap('n', '<Leader>db', ':Gitsigns change_base HEAD<CR>', opts)

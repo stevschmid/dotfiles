@@ -1,0 +1,45 @@
+-- vim: filetype=lua
+return require('packer').startup(function()
+  use 'wbthomason/packer.nvim'
+
+  -- Helpful tools
+  use 'tpope/vim-fugitive' -- Gblame all day every day
+  use 'tpope/vim-rhubarb' -- Enables :Gbrowse from fugitive.vim to open GitHub URLs
+  use 'tpope/vim-surround' -- Brackets for the masses
+  use 'tpope/vim-dispatch' -- Building with tmux as easy as baking olive bread
+  use 'tpope/vim-repeat' -- Plugs dig the dot
+  use 'tpope/vim-unimpaired' -- Helpful mappings
+  use 'tpope/vim-commentary' -- Comment dat baby out
+  use 'tpope/vim-abolish' -- Substitution
+  use 'tpope/vim-endwise' -- def; end
+  use 'simnalamburt/vim-mundo' -- Nilsi was right all along, super helpful
+  use 'jremmen/vim-ripgrep' -- RIP ag
+  use { 'neoclide/coc.nvim', branch = 'release' }
+
+  -- Navigation
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+  }
+  use 'christoomey/vim-tmux-navigator'
+  use { 'junegunn/fzf', run = ':call fzf#install()' }
+  use 'junegunn/fzf.vim'
+  use 'preservim/tagbar'
+
+  -- Display & Formatting
+  use 'sainnhe/everforest' -- color scheme
+  use 'lewis6991/gitsigns.nvim'
+  use 'moll/vim-bbye' -- delete buffers (close files) without closing your windows or messing up your layout
+
+  -- File Format Support
+  use 'sheerun/vim-polyglot' -- A solid language pack for Vim.
+  use 'vim-test/vim-test' -- Run specs
+  use { 'tpope/vim-rails', ft = 'ruby' } -- only load when opening Ruby file
+  use 'tpope/vim-projectionist' -- for vim-rake
+  use 'tpope/vim-rake'
+  use 'slim-template/vim-slim'
+  use 'ziglang/zig.vim' -- zig is AMAZING
+
+end)

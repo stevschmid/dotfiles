@@ -43,8 +43,7 @@ end
 namespace :bootstrap do
   desc 'Bootstrap vim'
   task :vim do
-    sh "curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
-    sh "nvim -c ':PlugInstall'"
+    sh "git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim"
   end
 
   desc 'Bootstrap zsh'

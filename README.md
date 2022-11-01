@@ -23,3 +23,14 @@ awk 'BEGIN{
     printf "\n";
 }'
 ```
+
+## Patched font
+
+Font `Input Mono` requires patching for nerd font icons, see [here](https://github.com/ryanoasis/nerd-fonts#option-8-patch-your-own-font).
+
+```
+git clone --depth 1 git@github.com:ryanoasis/nerd-fonts.git
+brew install fontforge
+fontforge -script font-patcher --careful --complete --progressbars /tmp/InputMono-Regular.ttf
+fontforge -script font-patcher --careful --complete --progressbars /tmp/InputMono-Bold.ttf
+```
