@@ -33,7 +33,7 @@ brew 'node'
 brew 'nodenv'
 brew 'reattach-to-user-namespace'
 brew 'tig'
-brew 'tmux'
+brew 'tmux' # swallow key issue? https://github.com/tmux/tmux/issues/2705
 brew 'zsh'
 brew 'ripgrep'
 brew 'ag' # ff
