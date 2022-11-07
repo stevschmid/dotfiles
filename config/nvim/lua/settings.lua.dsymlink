@@ -40,6 +40,10 @@ vim.o.numberwidth = 3 -- always reserve 3 spaces for line number
 vim.o.signcolumn = 'yes' -- keep 1 column for coc.vim  check
 vim.o.relativenumber = true
 
+-- Splits
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
 -- Color scheme
 vim.o.termguicolors = true
 vim.o.background = 'dark'
