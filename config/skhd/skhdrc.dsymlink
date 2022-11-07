@@ -17,7 +17,6 @@ shift + cmd - j : yabai -m window --warp south
 shift + cmd - k : yabai -m window --warp north
 shift + cmd - l : yabai -m window --warp east
 
-
 # Move focus container to workspace
 shift + alt - 1 : yabai -m window --space 1
 shift + alt - 2 : yabai -m window --space 2
@@ -71,18 +70,18 @@ shift + ctrl + alt - e  : yabai -m window --display prev; yabai -m display --foc
 # Config of yabai author: https://github.com/koekeishiya/dotfiles/blob/master/skhd/skhdrc
 
 # rotate tree
-alt - r : yabai -m space --rotate 90
+shift + alt - r : yabai -m space --rotate 90
 
 # mirror tree y-axis
-alt - y : yabai -m space --mirror y-axis
+shift + alt - y : yabai -m space --mirror y-axis
 
 # mirror tree x-axis
-alt - x : yabai -m space --mirror x-axis
+shift + alt - x : yabai -m space --mirror x-axis
 
 # balance size of windows
 shift + alt - 0 : yabai -m space --balance
 
 # toggle window split type
-alt - e : yabai -m window --toggle split balance size of windows
+shift + alt - e : yabai -m window --toggle split balance size of windows
 
 

@@ -1,7 +1,3 @@
--- Disable netrw at the very start of your init.lua (strongly advised)
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 -- vim: filetype=lua
 vim.g.mapleader = " "
 
@@ -50,8 +46,18 @@ vim.o.background = 'dark'
 -- vim.g.everforest_background = 'hard'
 vim.cmd('colorscheme everforest')
 
--- nvim-tree
-require('nvim-tree').setup()
+-- telescope.nvim
+require('telescope').setup{
+  defaults = {
+    mappings = {
+      i = {
+        ["<C-j>"] = "move_selection_next",
+        ["<C-k>"] = "move_selection_previous",
+      }
+    }
+  }
+}
+require("telescope").load_extension "file_browser"
 
 -- gitsigns
 require('gitsigns').setup()
@@ -59,9 +65,8 @@ require('gitsigns').setup()
 -- fzf (respect gitignore)
 vim.cmd("let $FZF_DEFAULT_COMMAND = 'rg --files'")
 
--- vim-test -> dispatch
-vim.g['test#strategy'] = 'dispatch'
-vim.g.dispatch_quickfix_height = 40
+-- vim-test -> vimux
+vim.g['test#strategy'] = 'vimux'
 
 -- coc-nvim
 vim.cmd [[inoremap <expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"]]

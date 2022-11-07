@@ -10,7 +10,7 @@ alias b='bundle'
 alias sam='bundle install; npm install; foreman start'
 
 alias vim=nvim #'mvim -v --servername VIM'
-alias vimed='cd ~/.dotfiles; vim ~/.config/nvim/init.vim'
+alias vimed='cd ~/.dotfiles; vim ~/.config/nvim/init.lua'
 alias dot='cd ~/.dotfiles'
 
 function replace() {

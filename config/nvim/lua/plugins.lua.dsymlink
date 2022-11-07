@@ -6,7 +6,7 @@ return require('packer').startup(function()
   use 'tpope/vim-fugitive' -- Gblame all day every day
   use 'tpope/vim-rhubarb' -- Enables :Gbrowse from fugitive.vim to open GitHub URLs
   use 'tpope/vim-surround' -- Brackets for the masses
-  use 'tpope/vim-dispatch' -- Building with tmux as easy as baking olive bread
+  use 'preservim/vimux'
   use 'tpope/vim-repeat' -- Plugs dig the dot
   use 'tpope/vim-unimpaired' -- Helpful mappings
   use 'tpope/vim-commentary' -- Comment dat baby out
@@ -17,16 +17,25 @@ return require('packer').startup(function()
   use { 'neoclide/coc.nvim', branch = 'release' }
 
   -- Navigation
-  use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    },
-  }
+  -- use {
+  --   'nvim-tree/nvim-tree.lua',
+  --   requires = {
+  --     'nvim-tree/nvim-web-devicons', -- optional, for file icons
+  --   },
+  -- }
+  --
+ 
+  use 'preservim/nerdtree'
   use 'christoomey/vim-tmux-navigator'
-  use { 'junegunn/fzf', run = ':call fzf#install()' }
-  use 'junegunn/fzf.vim'
+  -- use { 'junegunn/fzf', run = ':call fzf#install()' }
+  -- use 'junegunn/fzf.vim'
   use 'preservim/tagbar'
+
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  use { 'nvim-telescope/telescope-file-browser.nvim' }
 
   -- Display & Formatting
   use 'sainnhe/everforest' -- color scheme
@@ -41,5 +50,6 @@ return require('packer').startup(function()
   use 'tpope/vim-rake'
   use 'slim-template/vim-slim'
   use 'ziglang/zig.vim' -- zig is AMAZING
+
 
 end)
