@@ -2,10 +2,6 @@
 local opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 
--- fzf.vim
-keymap('n', '<C-p>', ':Files<CR>', opts)
-keymap('n', '<Leader>b', ':Buffers<CR>', opts)
-
 keymap('n', '<Leader>t', ':TestNearest<CR>', opts)
 keymap('n', '<Leader>T', ':TestFile<CR>', opts)
 keymap('n', '<Leader>l', ':TestLast<CR>', opts)
@@ -22,15 +18,13 @@ vim.cmd(':command Wq wq')
 vim.cmd(':command W w')
 vim.cmd(':command Q q')
 
--- telescope.nvim
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-vim.keymap.set('n', '<Leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<Leader>b', builtin.buffers, {})
-vim.keymap.set('n', '<Leader>fh', builtin.help_tags, {})
+-- neo-tree
+keymap('n', '<C-n>', ':Neotree toggle<CR>', opts)
+keymap('n', '<Leader>r', ':Neotree filesystem reveal<CR>', opts)
 
--- telescope-file-browser.nvim
-keymap('n', '<C-n>', ':Telescope file_browser path=%:p:h select_buffer=true grouped=true cwd_to_path=true<CR>', opts)
+-- fzf.vim
+keymap('n', '<C-p>', ':Files<CR>', opts)
+keymap('n', '<Leader>b', ':Buffers<CR>', opts)
 
 -- gitsigns change base
 keymap('n', '<Leader>dm', ':Gitsigns change_base master<CR>', opts)
