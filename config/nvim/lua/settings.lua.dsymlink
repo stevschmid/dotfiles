@@ -38,7 +38,7 @@ vim.o.wrap = false
 vim.o.number = true -- line number on the left
 vim.o.numberwidth = 3 -- always reserve 3 spaces for line number
 vim.o.signcolumn = 'yes' -- keep 1 column for coc.vim  check
-vim.o.relativenumber = true
+vim.o.relativenumber = false
 
 -- Splits
 vim.opt.splitbelow = true
@@ -49,6 +49,11 @@ vim.o.termguicolors = true
 vim.o.background = 'dark'
 -- vim.g.everforest_background = 'hard'
 vim.cmd('colorscheme everforest')
+
+-- Strip trailing spaces on save
+vim.cmd([[
+autocmd BufWritePre * :%s/\s\+$//e
+]])
 
 -- neo-tree
 require("neo-tree").setup({
@@ -98,5 +103,8 @@ vim.cmd("let $FZF_DEFAULT_COMMAND = 'rg --files'")
 -- vim-test -> vimux
 vim.g['test#strategy'] = 'vimux'
 
--- coc-nvim
-vim.cmd [[inoremap <expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"]]
+-- vim-polyglot
+-- disable auto-indent, it sometimes overwrites my shiftwidth 2 to 4
+-- maybe related to https://github.com/sheerun/vim-polyglot/issues/740
+-- also disable slim (uses default vim-slim which is slow https://github.com/slim-template/vim-slim/issues/19)
+vim.cmd("let g:polyglot_disabled = ['autoindent', 'slim']")
