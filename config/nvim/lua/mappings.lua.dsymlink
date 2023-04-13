@@ -19,8 +19,7 @@ vim.cmd(':command W w')
 vim.cmd(':command Q q')
 
 -- neo-tree
-keymap('n', '<C-n>', ':Neotree toggle<CR>', opts)
-keymap('n', '<Leader>r', ':Neotree filesystem reveal<CR>', opts)
+keymap('n', '<C-n>', ':Neotree filesystem reveal toggle<CR>', opts)
 
 -- fzf.vim
 keymap('n', '<C-p>', ':Files<CR>', opts)

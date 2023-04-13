@@ -1,7 +1,7 @@
 require 'pathname'
 require 'fileutils'
 
-INSTALL_RUBY_VERSION = '2.5.1'
+INSTALL_RUBY_VERSION = '3.1.2'
 
 DOTFILES = File.join(File.dirname(Pathname.new(__FILE__).realpath))
 
