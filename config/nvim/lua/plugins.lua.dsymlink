@@ -14,7 +14,7 @@ return require('packer').startup(function()
   use 'tpope/vim-endwise' -- def; end
   use 'simnalamburt/vim-mundo' -- Nilsi was right all along, super helpful
   use 'jremmen/vim-ripgrep' -- RIP ag
-  -- use { 'neoclide/coc.nvim', branch = 'release' }
+  use { 'neoclide/coc.nvim', branch = 'release' }
   use { 'godlygeek/tabular' } -- align using :Tab
   use 'ntpeters/vim-better-whitespace'
 
@@ -34,7 +34,16 @@ return require('packer').startup(function()
   use 'junegunn/fzf.vim'
 
   -- Display & Formatting
-  use 'sainnhe/everforest' -- color scheme
+  -- default everforest (& gruvbox material) by sainnhe considerably slow down vim (scrolling etc) when search is active in ruby file (hlsearch)
+  -- syntime on + syntime report report lots of syntax calls
+  use({
+    "neanias/everforest-nvim",
+    -- Optional; default configuration will be used if setup isn't called.
+    config = function()
+      require("everforest").setup()
+    end,
+  })
+
   use 'lewis6991/gitsigns.nvim'
   use 'moll/vim-bbye' -- delete buffers (close files) without closing your windows or messing up your layout
 
@@ -44,8 +53,6 @@ return require('packer').startup(function()
   use { 'tpope/vim-rails', ft = 'ruby' } -- only load when opening Ruby file
   use 'tpope/vim-projectionist' -- for vim-rake
   use 'tpope/vim-rake'
-  use 'onemanstartup/vim-slim' -- 'slim-template/vim-slim' (also in vim-polyglot) is slow due to Ruby highlighting https://github.com/slim-template/vim-slim/issues/19
   use 'ziglang/zig.vim' -- zig is AMAZING
-
 
 end)

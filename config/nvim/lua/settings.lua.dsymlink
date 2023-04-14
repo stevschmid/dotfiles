@@ -105,6 +105,4 @@ vim.g['test#strategy'] = 'vimux'
 
 -- vim-polyglot
 -- disable auto-indent, it sometimes overwrites my shiftwidth 2 to 4
--- maybe related to https://github.com/sheerun/vim-polyglot/issues/740
--- also disable slim (uses default vim-slim which is slow https://github.com/slim-template/vim-slim/issues/19)
-vim.cmd("let g:polyglot_disabled = ['autoindent', 'slim']")
+vim.cmd("let g:polyglot_disabled = ['autoindent']")
