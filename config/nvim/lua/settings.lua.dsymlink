@@ -102,7 +102,13 @@ vim.cmd("let $FZF_DEFAULT_COMMAND = 'rg --files'")
 
 -- vim-test -> vimux
 vim.g['test#strategy'] = 'vimux'
+vim.g['test#echo_command'] = 0 -- do not echo command
+vim.g['test#preserve_screen'] = 1 -- do not clear
 
 -- vim-polyglot
 -- disable auto-indent, it sometimes overwrites my shiftwidth 2 to 4
 vim.cmd("let g:polyglot_disabled = ['autoindent']")
+
+-- vim-copilot
+vim.g.copilot_filetypes = { yaml = true, markdown = true }
+

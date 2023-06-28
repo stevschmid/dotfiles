@@ -28,3 +28,10 @@ keymap('n', '<Leader>b', ':Buffers<CR>', opts)
 -- gitsigns change base
 keymap('n', '<Leader>dm', ':Gitsigns change_base master<CR>', opts)
 keymap('n', '<Leader>db', ':Gitsigns change_base HEAD<CR>', opts)
+
+-- make sure <C-c> behaves exactly like <Esc> (so plugin triggers work)
+keymap('i', '<C-c>', '<Esc>')
+
+-- copilot
+keymap('i', '<C-j>', '<Plug>(copilot-next)')
+keymap('i', '<C-k>', '<Plug>(copilot-previous)')

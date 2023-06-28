@@ -14,9 +14,10 @@ return require('packer').startup(function()
   use 'tpope/vim-endwise' -- def; end
   use 'simnalamburt/vim-mundo' -- Nilsi was right all along, super helpful
   use 'jremmen/vim-ripgrep' -- RIP ag
-  use { 'neoclide/coc.nvim', branch = 'release' }
   use { 'godlygeek/tabular' } -- align using :Tab
   use 'ntpeters/vim-better-whitespace'
+  use 'github/copilot.vim'
+  use 'ludovicchabant/vim-gutentags'
 
   -- Navigation
   use 'christoomey/vim-tmux-navigator'
@@ -37,10 +38,10 @@ return require('packer').startup(function()
   -- default everforest (& gruvbox material) by sainnhe considerably slow down vim (scrolling etc) when search is active in ruby file (hlsearch)
   -- syntime on + syntime report report lots of syntax calls
   use({
-    "neanias/everforest-nvim",
+    'neanias/everforest-nvim',
     -- Optional; default configuration will be used if setup isn't called.
     config = function()
-      require("everforest").setup()
+      require('everforest').setup()
     end,
   })
 
