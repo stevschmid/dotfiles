@@ -22,3 +22,5 @@ default = simple
 	template = /Users/spidy/.stCommitMsg
 [alias]
 	up = pull --rebase --autostash
+[pull]
+	rebase = true

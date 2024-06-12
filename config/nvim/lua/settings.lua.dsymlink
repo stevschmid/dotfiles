@@ -47,7 +47,7 @@ vim.opt.splitright = true
 -- Color scheme
 vim.o.termguicolors = true
 vim.o.background = 'dark'
--- vim.g.everforest_background = 'hard'
+vim.g.everforest_background = 'hard'
 vim.cmd('colorscheme everforest')
 
 -- Strip trailing spaces on save
@@ -91,6 +91,9 @@ require("neo-tree").setup({
         conflict = "!",
       },
     },
+  },
+  window = {
+    width = 60,
   },
 })
 
