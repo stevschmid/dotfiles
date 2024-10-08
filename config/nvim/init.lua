@@ -1,4 +1,3 @@
--- vim: filetype=lua
 require('plugins')
 require('settings')
 require('mappings')

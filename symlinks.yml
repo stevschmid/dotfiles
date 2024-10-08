@@ -1,0 +1,29 @@
+---
+vim/gvimrc: ~/.gvimrc
+git/gitconfig: ~/.gitconfig
+
+config/nvim/init.lua: ~/.config/nvim/init.lua
+config/nvim/lua/mappings.lua: ~/.config/nvim/lua/mappings.lua
+config/nvim/lua/settings.lua: ~/.config/nvim/lua/settings.lua
+config/nvim/lua/plugins.lua: ~/.config/nvim/lua/plugins.lua
+config/alacritty/alacritty.toml: ~/.config/alacritty/alacritty.toml
+
+config/skhd/skhdrc: ~/.config/skhd/skhdrc
+config/yabai/yabairc: ~/.config/yabai/yabairc
+
+prezto/zprofile: ~/.zprofile
+prezto/zpreztorc: ~/.zpreztorc
+prezto/zlogout: ~/.zlogout
+prezto/zlogin: ~/.zlogin
+
+R/Rprofile: ~/.Rprofile
+
+cpp/clang-format: ~/.clang-format
+
+tmux/tmux.conf: ~/.tmux.conf
+
+zsh/zshrc: ~/.zshrc
+zsh/zshenv: ~/.zshenv
+
+ruby/gemrc: ~/.gemrc
+ruby/irbrc: ~/.irbrc

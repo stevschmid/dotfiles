@@ -1,5 +1,6 @@
 require 'pathname'
 require 'fileutils'
+require 'yaml'
 
 INSTALL_RUBY_VERSION = '3.1.2'
 
@@ -7,26 +8,22 @@ DOTFILES = File.join(File.dirname(Pathname.new(__FILE__).realpath))
 
 desc 'Link dotfiles'
 task :link do
-  HOME = ENV['HOME']
-  Dir.chdir(DOTFILES)
-
   # Symlink *.symlink files
-  Dir.glob(['**/*.symlink', '**/*.dsymlink']).each do |f|
-    dir, base = Pathname.new(f).split
-    name_without_symlink = base.basename('.*')
-    if base.extname == '.dsymlink'
-      # symlink in hidden directory
-      fulldir = File.join(HOME, ".#{dir}")
-      FileUtils.mkdir_p fulldir
-      dst = File.join(fulldir, name_without_symlink)
-    else
-      # symlink for hidden file
-      dst = File.join(HOME, ".#{name_without_symlink}")
-    end
-
-    src = File.join(DOTFILES, f)
-    puts "Symlink #{dst}"
+  YAML.load(File.read('symlinks.yml')).each do |src, dst|
+    src = File.join(DOTFILES, src)
+    dst = dst.gsub('~', ENV['HOME'])
+    FileUtils.mkdir_p(File.dirname(dst))
+    puts "Symlink #{src} -> #{dst}"
     FileUtils.ln_sf(src, dst)
+  end
+end
+
+desc 'Unlink dotfiles'
+task :unlink do
+  YAML.load(File.read('symlinks.yml')).each do |src, dst|
+    dst = dst.gsub('~', ENV['HOME'])
+    puts "Unlink #{dst}"
+    FileUtils.rm_f(dst)
   end
 end
 
