@@ -9,6 +9,18 @@ return {
       })
 
       vim.cmd('colorscheme everforest')
+
+      -- transparent
+      vim.cmd [[
+        highlight Normal guibg=none
+        highlight NonText guibg=none
+
+        highlight Normal ctermbg=none
+        highlight NonText ctermbg=none
+
+        highlight NormalNC guibg=none
+        highlight NormalNC ctermbg=none
+      ]]
     end,
   }
 }

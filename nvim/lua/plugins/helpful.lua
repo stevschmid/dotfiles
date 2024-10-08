@@ -12,5 +12,16 @@ return {
  'jremmen/vim-ripgrep', -- RIP ag
  'godlygeek/tabular', -- align using :Tab
  'ntpeters/vim-better-whitespace',
- 'github/copilot.vim',
+
+ {
+   'github/copilot.vim',
+   lazy = false,
+   init = function()
+     vim.g.copilot_filetypes = { yaml = true, markdown = true }
+   end,
+   keys = {
+     { '<C-j>', '<Plug>(copilot-next)' },
+     { '<C-k>', '<Plug>(copilot-previous)' },
+   },
+ },
 }

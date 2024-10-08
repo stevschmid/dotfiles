@@ -6,8 +6,6 @@ keymap('n', '<Leader>T', ':TestFile<CR>', opts)
 keymap('n', '<Leader>l', ':TestLast<CR>', opts)
 keymap('n', '<Leader>g', ':TestVisit<CR>', opts)
 
-keymap('n', '<Leader>q', ':Bdelete<CR>', opts) -- bbye buffer delete (keep layout)
-
 keymap('n', '<F5>', ':MundoToggle<CR>', opts)
 keymap('n', '<F6>', ':TagbarToggle<CR>', opts)
 

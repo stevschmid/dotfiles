@@ -45,13 +45,9 @@ vim.opt.splitright = true
 
 -- Color scheme
 vim.o.termguicolors = true
-vim.o.background = 'dark'
-vim.g.everforest_background = 'hard'
-vim.cmd('colorscheme everforest')
--- vim.cmd(':hi normal guibg=NONE ctermbg=NONE')
 
 -- https://github.com/neovim/neovim/issues/23590#issuecomment-1911925029
--- Address slow down when search is active
+-- HUGE IMPACT: Address slow down when search is active
 vim.cmd('hi! link CurSearch Search')
 
 -- Strip trailing spaces on save
@@ -59,80 +55,8 @@ vim.cmd([[
 autocmd BufWritePre * :%s/\s\+$//e
 ]])
 
--- neo-tree
-require("neo-tree").setup({
-  enable_git_status = true,
-  default_component_configs = {
-    indent = {
-      padding = 1,
-      with_expanders = false,
-    },
-    icon = {
-      -- folder_closed = "▸",
-      -- folder_open = "▾",
-      -- folder_empty = "▹",
-      default = " ",
-    },
-    modified = {
-      symbol = "[+]",
-      highlight = "NeoTreeModified",
-    },
-    name = {
-      trailing_slash = false,
-      use_git_status_colors = true,
-      highlight = "NeoTreeFileName",
-    },
-    git_status = {
-      symbols = {
-        added = "+",
-        deleted = "-",
-        modified = "M",
-        renamed = "➜",
-        untracked = "★",
-        ignored = "◌",
-        unstaged = "✗",
-        staged = "✓",
-        conflict = "!",
-      },
-    },
-  },
-  window = {
-    width = 60,
-  },
-})
-
--- gitsigns
-require('gitsigns').setup()
-
--- fzf (respect gitignore)
-vim.cmd("let $FZF_DEFAULT_COMMAND = 'rg --files'")
-
 -- vim-test -> vimux
 vim.g['test#strategy'] = 'vimux'
 vim.g['test#echo_command'] = 0 -- do not echo command
 vim.g['test#preserve_screen'] = 1 -- do not clear
 
--- vim-polyglot
--- disable auto-indent, it sometimes overwrites my shiftwidth 2 to 4
-vim.cmd("let g:polyglot_disabled = ['autoindent']")
-
--- vim-copilot
-vim.g.copilot_filetypes = { yaml = true, markdown = true }
-
--- transparent
-vim.cmd [[
-  highlight Normal guibg=none
-  highlight NonText guibg=none
-  highlight Normal ctermbg=none
-  highlight NonText ctermbg=none
-]]
-
--- OIL
-require('oil').setup()
-
--- Harpoon
-require("harpoon").setup({
-  global_settings = {
-    mark_branch = true,
-  },
-})
