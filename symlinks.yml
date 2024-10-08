@@ -2,14 +2,15 @@
 vim/gvimrc: ~/.gvimrc
 git/gitconfig: ~/.gitconfig
 
-config/nvim/init.lua: ~/.config/nvim/init.lua
-config/nvim/lua/mappings.lua: ~/.config/nvim/lua/mappings.lua
-config/nvim/lua/settings.lua: ~/.config/nvim/lua/settings.lua
-config/nvim/lua/plugins.lua: ~/.config/nvim/lua/plugins.lua
-config/alacritty/alacritty.toml: ~/.config/alacritty/alacritty.toml
+nvim/init.lua: ~/.config/nvim/init.lua
+nvim/lua/mappings.lua: ~/.config/nvim/lua/mappings.lua
+nvim/lua/settings.lua: ~/.config/nvim/lua/settings.lua
+nvim/lua/plugins.lua: ~/.config/nvim/lua/plugins.lua
 
-config/skhd/skhdrc: ~/.config/skhd/skhdrc
-config/yabai/yabairc: ~/.config/yabai/yabairc
+alacritty/alacritty.toml: ~/.config/alacritty/alacritty.toml
+
+skhd/skhdrc: ~/.config/skhd/skhdrc
+yabai/yabairc: ~/.config/yabai/yabairc
 
 prezto/zprofile: ~/.zprofile
 prezto/zpreztorc: ~/.zpreztorc
