@@ -22,21 +22,22 @@ return require('packer').startup(function()
   -- Navigation
   use 'christoomey/vim-tmux-navigator'
   use 'preservim/tagbar'
-  -- Install Harpoon
-  use {
+  use({
     'ThePrimeagen/harpoon',
-    branch = "harpoon2",
+    -- branch = "harpoon2",
     requires = {
       'nvim-lua/plenary.nvim',
-    }
-  }
+    },
+  })
+
+  use "stevearc/oil.nvim"
 
   use {
     'nvim-neo-tree/neo-tree.nvim',
     branch = 'v2.x',
     requires = {
       'nvim-lua/plenary.nvim',
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
       'MunifTanjim/nui.nvim',
     }
   }

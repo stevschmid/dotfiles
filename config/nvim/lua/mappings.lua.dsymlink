@@ -37,13 +37,13 @@ keymap('i', '<C-j>', '<Plug>(copilot-next)')
 keymap('i', '<C-k>', '<Plug>(copilot-previous)')
 
 -- harpoon
-local harpoon = require("harpoon")
-harpoon:setup()
+keymap('n', '<leader>a', ':lua require("harpoon.mark").add_file()<CR>')
+keymap('n', '<leader>A', ':lua require("harpoon.ui").toggle_quick_menu()<CR>')
 
-keymap("n", "<leader>a", function() harpoon:list():add() end)
-keymap("n", "<leader>A", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+keymap('n', '<leader>1', ':lua require("harpoon.ui").nav_file(1)<CR>')
+keymap('n', '<leader>2', ':lua require("harpoon.ui").nav_file(2)<CR>')
+keymap('n', '<leader>3', ':lua require("harpoon.ui").nav_file(3)<CR>')
+keymap('n', '<leader>4', ':lua require("harpoon.ui").nav_file(4)<CR>')
 
-keymap("n", "<leader>1", function() harpoon:list():select(1) end)
-keymap("n", "<leader>2", function() harpoon:list():select(2) end)
-keymap("n", "<leader>3", function() harpoon:list():select(3) end)
-keymap("n", "<leader>4", function() harpoon:list():select(4) end)
+-- oil.nvim
+keymap('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })

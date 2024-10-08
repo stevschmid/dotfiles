@@ -38,7 +38,7 @@ vim.o.wrap = false
 vim.o.number = true -- line number on the left
 vim.o.numberwidth = 3 -- always reserve 3 spaces for line number
 vim.o.signcolumn = 'yes' -- keep 1 column for coc.vim  check
-vim.o.relativenumber = false
+vim.o.relativenumber = true
 
 -- Splits
 vim.opt.splitbelow = true
@@ -69,9 +69,9 @@ require("neo-tree").setup({
       with_expanders = false,
     },
     icon = {
-      folder_closed = "▸",
-      folder_open = "▾",
-      folder_empty = "▹",
+      -- folder_closed = "▸",
+      -- folder_open = "▾",
+      -- folder_empty = "▹",
       default = " ",
     },
     modified = {
@@ -128,3 +128,12 @@ vim.cmd [[
   highlight NonText ctermbg=none
 ]]
 
+-- OIL
+require('oil').setup()
+
+-- Harpoon
+require("harpoon").setup({
+  global_settings = {
+    mark_branch = true,
+  },
+})
