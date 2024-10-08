@@ -1,3 +1,3 @@
-require('plugins')
-require('settings')
-require('mappings')
+require('config.lazy')
+require('config.settings')
+require('config.mappings')

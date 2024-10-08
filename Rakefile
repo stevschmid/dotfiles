@@ -12,7 +12,7 @@ task :link do
   YAML.load(File.read('symlinks.yml')).each do |src, dst|
     src = File.join(DOTFILES, src)
     dst = dst.gsub('~', ENV['HOME'])
-    FileUtils.mkdir_p(File.dirname(dst))
+    FileUtils.mkdir_p(File.dirname(dst)) if File.file?(src)
     puts "Symlink #{src} -> #{dst}"
     FileUtils.ln_sf(src, dst)
   end

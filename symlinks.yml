@@ -3,9 +3,7 @@ vim/gvimrc: ~/.gvimrc
 git/gitconfig: ~/.gitconfig
 
 nvim/init.lua: ~/.config/nvim/init.lua
-nvim/lua/mappings.lua: ~/.config/nvim/lua/mappings.lua
-nvim/lua/settings.lua: ~/.config/nvim/lua/settings.lua
-nvim/lua/plugins.lua: ~/.config/nvim/lua/plugins.lua
+nvim/lua: ~/.config/nvim/lua
 
 alacritty/alacritty.toml: ~/.config/alacritty/alacritty.toml
 

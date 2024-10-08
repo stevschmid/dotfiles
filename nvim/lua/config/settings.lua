@@ -1,4 +1,3 @@
--- vim: filetype=lua
 vim.g.mapleader = " "
 
 -- Basic settings
