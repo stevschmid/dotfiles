@@ -190,7 +190,7 @@ key = "Left"
 mods = "Control"
 
 [[keyboard.bindings]]
-chars = "\u001B[1;3D"
+chars = "\u001BB" #"\u001B[1;3D"
 key = "Left"
 mods = "Alt"
 
@@ -215,7 +215,7 @@ key = "Right"
 mods = "Control"
 
 [[keyboard.bindings]]
-chars = "\u001B[1;3C"
+chars = "\u001BF" #"\u001B[1;3C"
 key = "Right"
 mods = "Alt"
 
@@ -605,6 +605,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
 [window]
 decorations = "full"
+opacity = 0.9
 
 [window.dimensions]
 columns = 80

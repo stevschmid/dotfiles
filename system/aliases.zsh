@@ -7,7 +7,10 @@ alias fh='history | grep'
 # ruby and development
 alias rc='bundle exec rails console'
 alias b='bundle'
-alias sam='bundle install; npm install; foreman start'
+
+# start overmind tmux with default config
+alias sam='rm .overmind.sock; bundle install; npm install; overmind start -F /dev/null'
+alias lg='lazygit'
 
 alias vim=nvim #'mvim -v --servername VIM'
 alias vimed='cd ~/.dotfiles; vim ~/.config/nvim/init.lua'

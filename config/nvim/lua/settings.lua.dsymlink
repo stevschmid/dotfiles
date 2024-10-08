@@ -49,6 +49,11 @@ vim.o.termguicolors = true
 vim.o.background = 'dark'
 vim.g.everforest_background = 'hard'
 vim.cmd('colorscheme everforest')
+-- vim.cmd(':hi normal guibg=NONE ctermbg=NONE')
+
+-- https://github.com/neovim/neovim/issues/23590#issuecomment-1911925029
+-- Address slow down when search is active
+vim.cmd('hi! link CurSearch Search')
 
 -- Strip trailing spaces on save
 vim.cmd([[
@@ -114,4 +119,12 @@ vim.cmd("let g:polyglot_disabled = ['autoindent']")
 
 -- vim-copilot
 vim.g.copilot_filetypes = { yaml = true, markdown = true }
+
+-- transparent
+vim.cmd [[
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+  highlight Normal ctermbg=none
+  highlight NonText ctermbg=none
+]]
 

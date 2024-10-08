@@ -28,6 +28,10 @@ alias ln='nocorrect ln'
 alias mv='nocorrect mv'
 alias rm='nocorrect rm'
 
+# Ensure [B and [F work (currently Alt+Left/Right)
+bindkey '\eB' backward-word
+bindkey '\eF' forward-word
+
 # load tmux
 # alias devenv='pushd ~/projects && tmux attach && popd'
 
@@ -36,6 +40,9 @@ alias rm='nocorrect rm'
 
 # yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# bob (neovim version manager)
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 
 # apple silicon homebrew support
 # https://soffes.blog/homebrew-on-apple-silicon
@@ -54,7 +61,7 @@ if [ "$TMUX" = "" ]; then tmux attach; fi
 # rbenv
 eval "$(rbenv init -)"
 
-# rbenv 
+# rbenv
 # DO NOT USE $(brew --prefix openssl@1.1) HERE!
 # slows down zsh startup time immensely
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@1.1"
@@ -73,7 +80,7 @@ lazynvm() {
 }
 
 nvm() {
-  lazynvm 
+  lazynvm
   nvm $@
 }
 

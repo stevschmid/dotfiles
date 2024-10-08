@@ -19,7 +19,7 @@ cask 'firefox'
 cask 'slack'
 cask 'vlc'
 cask 'font-input'
-cask 'sourcetree'
+# cask 'sourcetree'
 
 # app store
 mas 'PDFScanner', id: 410968114
@@ -45,6 +45,8 @@ brew 's3cmd'
 brew 'python'
 brew 'hub'
 brew 'graphicsmagick'
+brew 'overmind'
+brew 'lazygit'
 
 # services
 brew 'postgresql@10', restart_service: :changed, start_service: true
